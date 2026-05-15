@@ -1,0 +1,163 @@
+{
+  "common": {
+    "appName": "LIBOSO SERVICE",
+    "slogan": "Formalisez les services urbains africains grâce au digital",
+    "language": "Langue",
+    "fr": "Français",
+    "en": "English",
+    "theme": "Thème",
+    "dark": "Sombre",
+    "light": "Clair",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "download": "Télécharger",
+    "upload": "Télécharger un fichier",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "backToHome": "Retour à l'accueil"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "transborder": "Transfrontalier",
+    "impact": "Impact",
+    "team": "Équipe",
+    "contact": "Contact",
+    "dashboard": "Tableau de bord",
+    "bookNow": "Réserver maintenant",
+    "signIn": "Connexion",
+    "signUp": "S'inscrire"
+  },
+  "hero": {
+    "title": "Formalisez les Services Urbains Africains",
+    "subtitle": "Plateforme de réservation et gestion des services urbains intelligents",
+    "description": "Connectez clients, agents et entreprises pour transformer le secteur informel des services en Afrique",
+    "cta1": "Explorer les services",
+    "cta2": "Devenir partenaire",
+    "stats": {
+      "services": "Services actifs",
+      "professionals": "Professionnels",
+      "countries": "Pays couverts",
+      "bookings": "Réservations"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions complètes pour vos besoins urbains",
+    "housecleaning": "Nettoyage Maison",
+    "officecleaning": "Nettoyage Bureau",
+    "carwash": "Lavage Auto",
+    "wastemanagement": "Gestion Déchets",
+    "gardening": "Jardinage",
+    "buildingcleaning": "Nettoyage Immeubles",
+    "windowcleaning": "Nettoyage Vitres",
+    "recycling": "Recyclage",
+    "housekeeping": "Services Ménage",
+    "smarturban": "Services Urbains Intelligents",
+    "bookService": "Réserver ce service",
+    "availability": "Disponibilité",
+    "duration": "Durée",
+    "quality": "Qualité",
+    "agents": "Agents disponibles"
+  },
+  "booking": {
+    "title": "Réservez un Service",
+    "selectService": "Sélectionner un service",
+    "selectLocation": "Localisation",
+    "selectDate": "Sélectionner date",
+    "selectTime": "Sélectionner l'heure",
+    "selectPayment": "Mode de paiement",
+    "confirm": "Confirmer la réservation",
+    "trackingCode": "Code de suivi",
+    "status": "Statut",
+    "agentOnTheWay": "Agent en route",
+    "inProgress": "En cours",
+    "completed": "Terminé",
+    "rate": "Évaluer le service"
+  },
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "agents": "Agents",
+    "bookings": "Réservations",
+    "payments": "Paiements",
+    "analytics": "Analyses",
+    "addAgent": "Ajouter un agent",
+    "manageAgents": "Gérer les agents",
+    "activeBookings": "Réservations actives",
+    "totalRevenue": "Revenu total",
+    "customerRating": "Note clients",
+    "performanceScore": "Score de performance"
+  },
+  "payments": {
+    "title": "Moyens de Paiement",
+    "subtitle": "Le paiement mobile comme moteur de confiance en Afrique",
+    "methods": {
+      "airtel": "Airtel Money",
+      "mpesa": "M-Pesa",
+      "orange": "Orange Money",
+      "visa": "Visa",
+      "pos": "POS",
+      "cashless": "Paiement sans contact"
+    },
+    "secure": "Sécurisé",
+    "trusted": "Approuvé",
+    "fastPayment": "Paiement rapide"
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "subtitle": "Les penseurs innovants derrière LIBOSO",
+    "members": {
+      "nathalieKayemba": "Nathalie Kayemba",
+      "mwakaAlexandra": "Mwaka Alexandra",
+      "uwiriConso": "Uwiri Conso"
+    }
+  },
+  "footer": {
+    "description": "Plateforme digitale pour formalize les services urbains en Afrique",
+    "quickLinks": "Liens rapides",
+    "company": "Entreprise",
+    "legal": "Légal",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "contact": "Contact",
+    "social": "Réseaux sociaux",
+    "rights": "Tous droits réservés"
+  },
+  "impact": {
+    "title": "Notre Impact Social",
+    "subtitle": "Transformation de l'économie urbaine africaine",
+    "jobsCreated": "Emplois créés",
+    "youthEmployment": "Emploi des jeunes",
+    "womenEmpowerment": "Autonomisation des femmes",
+    "urbanHygiene": "Hygiène urbaine"
+  },
+  "transborder": {
+    "title": "Réseau Transfrontalier Africain",
+    "subtitle": "Connectivity régionale des services urbains",
+    "countries": "Pays",
+    "drc": "République Démocratique du Congo",
+    "rwanda": "Rwanda",
+    "kenya": "Kenya",
+    "tanzania": "Tanzanie",
+    "uganda": "Ouganda",
+    "strategic": "Par Hub Stratégique",
+    "mainMarket": "Marché Principal",
+    "regionalPartner": "Partenaire Régional"
+  },
+  "about": {
+    "title": "À Propos de LIBOSO",
+    "mission": "Structurer et sécuriser les services urbains en Afrique grâce à une plateforme digitale",
+    "vision": "Créer un réseau africain transfrontalier de services urbains intelligents",
+    "informalEconomy": "80% des travailleurs en RDC sont dans l'économie informelle",
+    "urbanization": "Urbanisation rapide africaine",
+    "needStructure": "Besoin de structuration et professionnalisation",
+    "digitalInnovation": "Innovation digitale pour l'inclusion économique"
+  }
+}
