@@ -2,15 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { LucideIcon } from 'lucide-react';
 
 interface StatItemProps {
   value: string | number;
   label: string;
-  icon?: string;
+  icon?: LucideIcon | React.ComponentType<any>;
   index?: number;
 }
 
-function StatItem({ value, label, icon, index = 0 }: StatItemProps) {
+function StatItem({ value, label, icon: Icon, index = 0 }: StatItemProps) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -19,7 +20,7 @@ function StatItem({ value, label, icon, index = 0 }: StatItemProps) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="text-center"
     >
-      {icon && <div className="text-4xl mb-4">{icon}</div>}
+      {Icon && <Icon className="w-12 h-12 text-blue-600 dark:text-blue-400 mx-auto mb-4" />}
       <div className="text-4xl sm:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">
         {value}
       </div>
