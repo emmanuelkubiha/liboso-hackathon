@@ -41,9 +41,6 @@ export default function TeamPage() {
                   <div className="w-44 h-44 rounded-full bg-white/20 border border-white/40 backdrop-blur flex items-center justify-center">
                     <UserRound className="w-24 h-24 text-white" />
                   </div>
-                  <div className="absolute bottom-4 px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-semibold tracking-wide">
-                    Profil féminin
-                  </div>
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
 
