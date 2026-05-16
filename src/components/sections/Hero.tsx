@@ -26,10 +26,10 @@ export function Hero({
   backgroundImage,
 }: HeroProps) {
   const heroSlides = [
-    'https://images.unsplash.com/photo-1521790797524-b2497295b8a0?w=1600&h=900&fit=crop',
-    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&h=900&fit=crop',
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&h=900&fit=crop',
-    'https://images.unsplash.com/photo-1462899006636-339e08d1844e?w=1600&h=900&fit=crop',
+    'https://images.pexels.com/photos/4239032/pexels-photo-4239032.jpeg?auto=compress&cs=tinysrgb&w=1800',
+    'https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1800',
+    'https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg?auto=compress&cs=tinysrgb&w=1800',
+    'https://images.pexels.com/photos/7948034/pexels-photo-7948034.jpeg?auto=compress&cs=tinysrgb&w=1800',
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 

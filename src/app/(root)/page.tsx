@@ -23,6 +23,10 @@ import {
   CreditCard,
   MapPin,
   CircleCheck,
+  Sparkles,
+  ShieldCheck,
+  Zap,
+  ArrowUpRight,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -42,7 +46,7 @@ export default function HomePage() {
       />
 
       {/* Problem Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -82,9 +86,12 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-6 rounded-xl bg-slate-50 dark:bg-slate-800"
+                whileHover={{ y: -6 }}
+                className="p-6 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all"
               >
-                <item.icon className="w-10 h-10 text-slate-700 dark:text-slate-300 mb-4" />
+                <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-slate-700 dark:text-slate-300" />
+                </div>
                 <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">
                   {item.title}
                 </h3>
@@ -96,7 +103,9 @@ export default function HomePage() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 relative overflow-hidden">
+        <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-cyan-300/20 blur-3xl" />
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +119,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 relative">
             {[
               {
                 icon: CheckCircle2,
@@ -134,7 +143,8 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-6 rounded-xl bg-blue-500/20 backdrop-blur border border-white/20 text-white"
+                whileHover={{ y: -8 }}
+                className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 text-white hover:bg-white/15 transition-all"
               >
                 <item.icon className="w-10 h-10 text-white mb-4" />
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -146,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -162,7 +172,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-4 gap-5">
             {[
               { step: '1', title: 'Sélectionner', description: 'Choisir un service' },
               { step: '2', title: 'Localiser', description: 'Indiquer votre adresse' },
@@ -175,7 +185,8 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="relative text-center"
+                whileHover={{ y: -6 }}
+                className="relative text-center p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-800/80 backdrop-blur"
               >
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">
                   {item.step}
@@ -184,9 +195,7 @@ export default function HomePage() {
                   {item.title}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400">{item.description}</p>
-                {idx < 3 && (
-                  <div className="hidden md:block absolute top-8 -right-8 w-8 h-1 bg-blue-600" />
-                )}
+                {idx < 3 && <ArrowUpRight className="hidden md:block absolute -right-3 -top-3 w-5 h-5 text-blue-500" />}
               </motion.div>
             ))}
           </div>
@@ -205,7 +214,7 @@ export default function HomePage() {
       />
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -235,16 +244,16 @@ export default function HomePage() {
           >
             <a
               href="/services"
-              className="inline-flex px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all shadow-lg"
             >
-              Voir Tous les Services →
+              Voir Tous les Services <ArrowUpRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
       </section>
 
       {/* Payment Methods Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -277,7 +286,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: idx * 0.06, ease: 'easeOut' }}
-                  className="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 text-center hover:shadow-lg transition-shadow"
+                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 text-center hover:shadow-xl border border-slate-200 dark:border-slate-700 transition-all"
                 >
                   <div className="text-4xl mb-4 flex justify-center">
                     {typeof Icon === 'string' ? (
@@ -298,7 +307,7 @@ export default function HomePage() {
       </section>
 
       {/* Availability Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -318,6 +327,40 @@ export default function HomePage() {
               Visualisez nos services actifs en Afrique Centrale et en Afrique de l'Est.
             </p>
 
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+              className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
+            >
+              <div className="grid md:grid-cols-3 gap-5 items-center">
+                <div className="md:col-span-2">
+                  <p className="text-blue-100 text-sm uppercase tracking-wide mb-1">Carte de couverture</p>
+                  <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
+                    <Sparkles className="w-6 h-6" /> Couverture active en temps réel
+                  </h3>
+                  <p className="text-blue-100">
+                    Nos équipes interviennent dans les grandes villes avec un réseau d'agents certifiés et paiement sécurisé.
+                  </p>
+                </div>
+                <div className="flex gap-3 md:justify-end">
+                  <div className="px-4 py-3 rounded-xl bg-white/15 border border-white/20 text-center min-w-[88px]">
+                    <p className="text-2xl font-bold">5+</p>
+                    <p className="text-xs text-blue-100">Pays</p>
+                  </div>
+                  <div className="px-4 py-3 rounded-xl bg-white/15 border border-white/20 text-center min-w-[88px]">
+                    <p className="text-2xl font-bold">24/7</p>
+                    <p className="text-xs text-blue-100">Disponibilité</p>
+                  </div>
+                  <div className="px-4 py-3 rounded-xl bg-white/15 border border-white/20 text-center min-w-[88px]">
+                    <p className="text-2xl font-bold">99%</p>
+                    <p className="text-xs text-blue-100">Fiabilité</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
@@ -331,7 +374,7 @@ export default function HomePage() {
                     { flag: '🇨🇫', name: 'RCA' },
                     { flag: '🇨🇬', name: 'Congo-Brazzaville' },
                   ].map((country) => (
-                    <div key={country.name} className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-slate-800">
+                    <div key={country.name} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
                       <span className="text-lg">{country.flag}</span>
                       <span className="flex-1 ml-3 text-slate-900 dark:text-white">{country.name}</span>
                       <span className="text-xs text-green-700 dark:text-green-300 font-medium">Actif</span>
@@ -352,7 +395,7 @@ export default function HomePage() {
                     { flag: '🇪🇹', name: 'Éthiopie' },
                     { flag: '🇸🇸', name: 'Soudan du Sud' },
                   ].map((country) => (
-                    <div key={country.name} className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-slate-800">
+                    <div key={country.name} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
                       <span className="text-lg">{country.flag}</span>
                       <span className="flex-1 ml-3 text-slate-900 dark:text-white">{country.name}</span>
                       <span className="text-xs text-blue-700 dark:text-blue-300 font-medium">Actif</span>

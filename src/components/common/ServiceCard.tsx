@@ -50,6 +50,10 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
         <img
           src={service.image}
           alt={service.name}
+          onError={(event) => {
+            event.currentTarget.src =
+              'https://images.pexels.com/photos/4239032/pexels-photo-4239032.jpeg?auto=compress&cs=tinysrgb&w=1200';
+          }}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
