@@ -83,6 +83,81 @@
     "completed": "Completed",
     "rate": "Rate the service"
   },
+  "bookingPage": {
+    "step": "Step",
+    "of": "of",
+    "stepLabels": {
+      "service": "Select a service",
+      "location": "Location",
+      "dateTime": "Date and time",
+      "payment": "Payment",
+      "confirmation": "Confirmation"
+    },
+    "chooseService": "Choose a Service",
+    "continue": "Continue",
+    "back": "Back",
+    "whereService": "Where do you want the service?",
+    "address": "Address",
+    "addressPlaceholder": "District, street, number...",
+    "city": "City",
+    "cities": {
+      "kinshasa": "Kinshasa",
+      "kigali": "Kigali",
+      "nairobi": "Nairobi",
+      "darEsSalaam": "Dar es Salaam",
+      "kampala": "Kampala"
+    },
+    "whenService": "When do you want the service?",
+    "date": "Date",
+    "time": "Time",
+    "paymentMethod": "Payment Method",
+    "confirmationTitle": "Booking Confirmation",
+    "summary": {
+      "service": "Service",
+      "location": "Location",
+      "dateTime": "Date & Time",
+      "payment": "Payment",
+      "at": "at"
+    },
+    "readyToConfirm": "Ready to confirm your booking",
+    "alertConfirmed": "Booking confirmed! Tracking code:",
+    "confirmAndPay": "Confirm and Pay",
+    "testimonialsTitle": "What Our Clients Say",
+    "serviceCards": {
+      "cleaningHouse": "Complete residential cleaning at your home",
+      "cleaningOffice": "Professional office maintenance",
+      "carWash": "Interior and exterior vehicle cleaning",
+      "wasteManagement": "Responsible waste collection and management",
+      "gardening": "Maintenance and beautification of green spaces",
+      "buildingCleaning": "Building and shared area cleaning"
+    },
+    "paymentCards": {
+      "airtel": "Fast mobile payment via Airtel Money",
+      "mpesa": "Secure payment with M-Pesa",
+      "orange": "Instant transaction with Orange Money",
+      "visa": "Visa bank card accepted",
+      "mastercard": "Mastercard bank card accepted",
+      "pos": "Payment via POS terminal",
+      "contactless": "Secure contactless payment"
+    },
+    "testimonials": {
+      "t1": {
+        "name": "Albertine M.",
+        "city": "Kinshasa",
+        "text": "Fast and professional service! Courteous and efficient agent."
+      },
+      "t2": {
+        "name": "Pierre K.",
+        "city": "Kigali",
+        "text": "Very easy first booking. Very satisfied with the quality of work."
+      },
+      "t3": {
+        "name": "Sarah N.",
+        "city": "Nairobi",
+        "text": "Excellent platform. I highly recommend LIBOSO!"
+      }
+    }
+  },
   "dashboard": {
     "title": "Dashboard",
     "agents": "Agents",
@@ -385,6 +460,7 @@
       }
     },
     "viewAllServices": "View All Services",
+    "mediaVisualAlt": "LIBOSO visual preview",
     "paymentCards": {
       "airtel": "Secure mobile payment",
       "mpesa": "Fast payment service",

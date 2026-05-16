@@ -61,6 +61,52 @@ export default function BookingPage() {
     }
   };
 
+  const stepLabelMap: Record<number, string> = {
+    1: t('bookingPage.stepLabels.service'),
+    2: t('bookingPage.stepLabels.location'),
+    3: t('bookingPage.stepLabels.dateTime'),
+    4: t('bookingPage.stepLabels.payment'),
+    5: t('bookingPage.stepLabels.confirmation'),
+  };
+
+  const serviceNameMap: Record<string, string> = {
+    'cleaning-house': t('services.housecleaning'),
+    'cleaning-office': t('services.officecleaning'),
+    'car-wash': t('services.carwash'),
+    'waste-management': t('services.wastemanagement'),
+    gardening: t('services.gardening'),
+    'building-cleaning': t('services.buildingcleaning'),
+  };
+
+  const serviceDescriptionMap: Record<string, string> = {
+    'cleaning-house': t('bookingPage.serviceCards.cleaningHouse'),
+    'cleaning-office': t('bookingPage.serviceCards.cleaningOffice'),
+    'car-wash': t('bookingPage.serviceCards.carWash'),
+    'waste-management': t('bookingPage.serviceCards.wasteManagement'),
+    gardening: t('bookingPage.serviceCards.gardening'),
+    'building-cleaning': t('bookingPage.serviceCards.buildingCleaning'),
+  };
+
+  const paymentNameMap: Record<string, string> = {
+    airtel: t('payments.methods.airtel'),
+    mpesa: t('payments.methods.mpesa'),
+    orange: t('payments.methods.orange'),
+    visa: t('payments.methods.visa'),
+    mastercard: 'Mastercard',
+    pos: t('payments.methods.pos'),
+    contactless: t('payments.methods.cashless'),
+  };
+
+  const paymentDescriptionMap: Record<string, string> = {
+    airtel: t('bookingPage.paymentCards.airtel'),
+    mpesa: t('bookingPage.paymentCards.mpesa'),
+    orange: t('bookingPage.paymentCards.orange'),
+    visa: t('bookingPage.paymentCards.visa'),
+    mastercard: t('bookingPage.paymentCards.mastercard'),
+    pos: t('bookingPage.paymentCards.pos'),
+    contactless: t('bookingPage.paymentCards.contactless'),
+  };
+
   return (
     <div className="pt-24 pb-20">
       {/* Hero */}
@@ -103,7 +149,7 @@ export default function BookingPage() {
             ))}
           </div>
           <div className="text-sm text-slate-600 dark:text-slate-400">
-            Étape {step} sur 5 - {step === 1 ? 'Sélectionner un service' : step === 2 ? 'Localisation' : step === 3 ? 'Date et heure' : step === 4 ? 'Paiement' : 'Confirmation'}
+            {t('bookingPage.step')} {step} {t('bookingPage.of')} 5 - {stepLabelMap[step]}
           </div>
         </div>
       </section>
@@ -115,7 +161,7 @@ export default function BookingPage() {
           {step === 1 && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
-                Choisir un Service
+                {t('bookingPage.chooseService')}
               </h2>
 
               <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -140,9 +186,9 @@ export default function BookingPage() {
                         <ServiceIcon className="w-5 h-5 text-amber-600" />
                       </div>
                     </div>
-                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">{service.name}</h3>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">{serviceNameMap[service.id] || service.name}</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
-                      {service.description}
+                      {serviceDescriptionMap[service.id] || service.description}
                     </p>
                     <div className="flex justify-between text-sm">
                       <span className="text-amber-600 font-semibold">{service.price}</span>
@@ -157,7 +203,7 @@ export default function BookingPage() {
                 disabled={!formData.service}
                 className="w-full px-6 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2"
               >
-                Continuer <ArrowRight className="w-5 h-5" />
+                {t('bookingPage.continue')} <ArrowRight className="w-5 h-5" />
               </button>
             </motion.div>
           )}
@@ -166,34 +212,34 @@ export default function BookingPage() {
           {step === 2 && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
-                Où voulez-vous le service?
+                {t('bookingPage.whereService')}
               </h2>
 
               <div className="space-y-4 mb-8">
                 <div>
                   <label className="block font-semibold text-slate-900 dark:text-white mb-2">
                     <MapPin className="w-5 h-5 inline mr-2" />
-                    Adresse
+                    {t('bookingPage.address')}
                   </label>
                   <input
                     type="text"
                     value={formData.location}
                     onChange={(e) => handleInputChange('location', e.target.value)}
-                    placeholder="Quartier, rue, numéro..."
+                    placeholder={t('bookingPage.addressPlaceholder')}
                     className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-600"
                   />
                 </div>
 
                 <div>
                   <label className="block font-semibold text-slate-900 dark:text-white mb-2">
-                    Ville
+                    {t('bookingPage.city')}
                   </label>
                   <select className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-600">
-                    <option>Kinshasa</option>
-                    <option>Kigali</option>
-                    <option>Nairobi</option>
-                    <option>Dar es Salaam</option>
-                    <option>Kampala</option>
+                    <option>{t('bookingPage.cities.kinshasa')}</option>
+                    <option>{t('bookingPage.cities.kigali')}</option>
+                    <option>{t('bookingPage.cities.nairobi')}</option>
+                    <option>{t('bookingPage.cities.darEsSalaam')}</option>
+                    <option>{t('bookingPage.cities.kampala')}</option>
                   </select>
                 </div>
               </div>
@@ -203,14 +249,14 @@ export default function BookingPage() {
                   onClick={() => setStep(step - 1)}
                   className="flex-1 px-6 py-3 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 text-slate-900 dark:text-white font-bold rounded-lg transition-colors"
                 >
-                  Retour
+                    {t('bookingPage.back')}
                 </button>
                 <button
                   onClick={handleNextStep}
                   disabled={!formData.location}
                   className="flex-1 px-6 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
-                  Continuer <ArrowRight className="w-5 h-5" />
+                  {t('bookingPage.continue')} <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
             </motion.div>
@@ -220,14 +266,14 @@ export default function BookingPage() {
           {step === 3 && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
-                Quand voulez-vous le service?
+                {t('bookingPage.whenService')}
               </h2>
 
               <div className="space-y-4 mb-8">
                 <div>
                   <label className="block font-semibold text-slate-900 dark:text-white mb-2">
                     <Calendar className="w-5 h-5 inline mr-2" />
-                    Date
+                    {t('bookingPage.date')}
                   </label>
                   <input
                     type="date"
@@ -240,7 +286,7 @@ export default function BookingPage() {
                 <div>
                   <label className="block font-semibold text-slate-900 dark:text-white mb-2">
                     <Clock className="w-5 h-5 inline mr-2" />
-                    Heure
+                    {t('bookingPage.time')}
                   </label>
                   <input
                     type="time"
@@ -256,14 +302,14 @@ export default function BookingPage() {
                   onClick={() => setStep(step - 1)}
                   className="flex-1 px-6 py-3 bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-lg"
                 >
-                  Retour
+                    {t('bookingPage.back')}
                 </button>
                 <button
                   onClick={handleNextStep}
                   disabled={!formData.date || !formData.time}
                   className="flex-1 px-6 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 text-white font-bold rounded-lg flex items-center justify-center gap-2"
                 >
-                  Continuer <ArrowRight className="w-5 h-5" />
+                  {t('bookingPage.continue')} <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
             </motion.div>
@@ -273,7 +319,7 @@ export default function BookingPage() {
           {step === 4 && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
-                Mode de Paiement
+                {t('bookingPage.paymentMethod')}
               </h2>
 
               <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -294,9 +340,9 @@ export default function BookingPage() {
                     <div className="mb-3">
                       <PaymentIcon className="w-8 h-8 text-amber-600" />
                     </div>
-                    <h3 className="font-bold text-slate-900 dark:text-white">{method.name}</h3>
+                    <h3 className="font-bold text-slate-900 dark:text-white">{paymentNameMap[method.id] || method.name}</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                      {method.description}
+                      {paymentDescriptionMap[method.id] || method.description}
                     </p>
                   </motion.div>
                 );})}
@@ -307,14 +353,14 @@ export default function BookingPage() {
                   onClick={() => setStep(step - 1)}
                   className="flex-1 px-6 py-3 bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-lg"
                 >
-                  Retour
+                    {t('bookingPage.back')}
                 </button>
                 <button
                   onClick={handleNextStep}
                   disabled={!formData.paymentMethod}
                   className="flex-1 px-6 py-3 bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 text-white font-bold rounded-lg flex items-center justify-center gap-2"
                 >
-                  Continuer <ArrowRight className="w-5 h-5" />
+                  {t('bookingPage.continue')} <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
             </motion.div>
@@ -324,40 +370,40 @@ export default function BookingPage() {
           {step === 5 && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <h2 className="text-3xl font-bold mb-8 text-center text-slate-900 dark:text-white">
-                Confirmation de Réservation
+                {t('bookingPage.confirmationTitle')}
               </h2>
 
               <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg mb-8">
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span className="text-slate-600 dark:text-slate-400">Service</span>
+                    <span className="text-slate-600 dark:text-slate-400">{t('bookingPage.summary.service')}</span>
                     <span className="font-semibold text-slate-900 dark:text-white">
-                      {SERVICES.find((s) => s.id === formData.service)?.name}
+                      {serviceNameMap[formData.service] || SERVICES.find((s) => s.id === formData.service)?.name}
                     </span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span className="text-slate-600 dark:text-slate-400">Localisation</span>
+                    <span className="text-slate-600 dark:text-slate-400">{t('bookingPage.summary.location')}</span>
                     <span className="font-semibold text-slate-900 dark:text-white">
                       {formData.location}
                     </span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span className="text-slate-600 dark:text-slate-400">Date & Heure</span>
+                    <span className="text-slate-600 dark:text-slate-400">{t('bookingPage.summary.dateTime')}</span>
                     <span className="font-semibold text-slate-900 dark:text-white">
-                      {formData.date} à {formData.time}
+                      {formData.date} {t('bookingPage.summary.at')} {formData.time}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-600 dark:text-slate-400">Paiement</span>
+                    <span className="text-slate-600 dark:text-slate-400">{t('bookingPage.summary.payment')}</span>
                     <span className="font-semibold text-slate-900 dark:text-white">
-                      {PAYMENT_METHODS.find((m) => m.id === formData.paymentMethod)?.name}
+                      {paymentNameMap[formData.paymentMethod] || PAYMENT_METHODS.find((m) => m.id === formData.paymentMethod)?.name}
                     </span>
                   </div>
                 </div>
 
                 <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-center">
                   <p className="text-green-700 dark:text-green-300 font-semibold">
-                    ✓ Prêt à confirmer votre réservation
+                    ✓ {t('bookingPage.readyToConfirm')}
                   </p>
                 </div>
               </div>
@@ -367,11 +413,11 @@ export default function BookingPage() {
                   onClick={() => setStep(step - 1)}
                   className="flex-1 px-6 py-3 bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-lg"
                 >
-                  Retour
+                    {t('bookingPage.back')}
                 </button>
                 <button
                   onClick={() => {
-                    alert('Réservation confirmée! Code de suivi: LIBOSO-' + Math.random().toString(36).substr(2, 9).toUpperCase());
+                      alert(`${t('bookingPage.alertConfirmed')} LIBOSO-${Math.random().toString(36).substring(2, 11).toUpperCase()}`);
                     setStep(1);
                     setFormData({
                       service: '',
@@ -383,7 +429,7 @@ export default function BookingPage() {
                   }}
                   className="flex-1 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-colors"
                 >
-                  Confirmer et Payer
+                  {t('bookingPage.confirmAndPay')}
                 </button>
               </div>
             </motion.div>
@@ -395,27 +441,27 @@ export default function BookingPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
-            Ce que Disent nos Clients
+            {t('bookingPage.testimonialsTitle')}
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                name: 'Albertine M.',
-                city: 'Kinshasa',
-                text: 'Service rapide et professionnel! Agent courtois et efficace.',
+                name: t('bookingPage.testimonials.t1.name'),
+                city: t('bookingPage.testimonials.t1.city'),
+                text: t('bookingPage.testimonials.t1.text'),
                 rating: 5,
               },
               {
-                name: 'Pierre K.',
-                city: 'Kigali',
-                text: 'Premier fois très facile. Très satisfait du travail effectué.',
+                name: t('bookingPage.testimonials.t2.name'),
+                city: t('bookingPage.testimonials.t2.city'),
+                text: t('bookingPage.testimonials.t2.text'),
                 rating: 5,
               },
               {
-                name: 'Sarah N.',
-                city: 'Nairobi',
-                text: 'Excellente plateforme. Recommande vivement LIBOSO!',
+                name: t('bookingPage.testimonials.t3.name'),
+                city: t('bookingPage.testimonials.t3.city'),
+                text: t('bookingPage.testimonials.t3.text'),
                 rating: 5,
               },
             ].map((testimonial, idx) => (

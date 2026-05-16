@@ -83,6 +83,81 @@
     "completed": "Terminé",
     "rate": "Évaluer le service"
   },
+  "bookingPage": {
+    "step": "Étape",
+    "of": "sur",
+    "stepLabels": {
+      "service": "Sélectionner un service",
+      "location": "Localisation",
+      "dateTime": "Date et heure",
+      "payment": "Paiement",
+      "confirmation": "Confirmation"
+    },
+    "chooseService": "Choisir un service",
+    "continue": "Continuer",
+    "back": "Retour",
+    "whereService": "Où voulez-vous le service ?",
+    "address": "Adresse",
+    "addressPlaceholder": "Quartier, rue, numéro...",
+    "city": "Ville",
+    "cities": {
+      "kinshasa": "Kinshasa",
+      "kigali": "Kigali",
+      "nairobi": "Nairobi",
+      "darEsSalaam": "Dar es Salaam",
+      "kampala": "Kampala"
+    },
+    "whenService": "Quand voulez-vous le service ?",
+    "date": "Date",
+    "time": "Heure",
+    "paymentMethod": "Mode de paiement",
+    "confirmationTitle": "Confirmation de réservation",
+    "summary": {
+      "service": "Service",
+      "location": "Localisation",
+      "dateTime": "Date & Heure",
+      "payment": "Paiement",
+      "at": "à"
+    },
+    "readyToConfirm": "Prêt à confirmer votre réservation",
+    "alertConfirmed": "Réservation confirmée ! Code de suivi :",
+    "confirmAndPay": "Confirmer et payer",
+    "testimonialsTitle": "Ce que disent nos clients",
+    "serviceCards": {
+      "cleaningHouse": "Nettoyage résidentiel complet à domicile",
+      "cleaningOffice": "Entretien professionnel de vos bureaux",
+      "carWash": "Lavage intérieur et extérieur de véhicule",
+      "wasteManagement": "Collecte et gestion responsable des déchets",
+      "gardening": "Entretien et embellissement de vos espaces verts",
+      "buildingCleaning": "Nettoyage d'immeubles et espaces communs"
+    },
+    "paymentCards": {
+      "airtel": "Paiement mobile rapide via Airtel Money",
+      "mpesa": "Paiement sécurisé avec M-Pesa",
+      "orange": "Transaction instantanée avec Orange Money",
+      "visa": "Carte bancaire Visa acceptée",
+      "mastercard": "Carte bancaire Mastercard acceptée",
+      "pos": "Paiement sur terminal POS",
+      "contactless": "Paiement sans contact sécurisé"
+    },
+    "testimonials": {
+      "t1": {
+        "name": "Albertine M.",
+        "city": "Kinshasa",
+        "text": "Service rapide et professionnel ! Agent courtois et efficace."
+      },
+      "t2": {
+        "name": "Pierre K.",
+        "city": "Kigali",
+        "text": "Première réservation très simple. Très satisfait du travail effectué."
+      },
+      "t3": {
+        "name": "Sarah N.",
+        "city": "Nairobi",
+        "text": "Excellente plateforme. Je recommande vivement LIBOSO !"
+      }
+    }
+  },
   "dashboard": {
     "title": "Tableau de Bord",
     "agents": "Agents",
@@ -385,6 +460,7 @@
       }
     },
     "viewAllServices": "Voir Tous les Services",
+    "mediaVisualAlt": "Aperçu visuel de LIBOSO",
     "paymentCards": {
       "airtel": "Paiement mobile sécurisé",
       "mpesa": "Service de paiement rapide",

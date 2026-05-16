@@ -26,6 +26,8 @@ export function Hero({
   backgroundImage,
 }: HeroProps) {
   const heroSlides = [
+    '/images/New_liboso_look.jpg',
+    '/images/new_a_man_washing_a_motorcycle.jpg',
     '/images/pexels-gustavo-fring-4920286.jpg',
     '/images/afro-woman-holding-bucket-with-cleaning-items.jpg',
     '/images/pexels-leticia-golubov-1454213895-37553910.jpg',
