@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ServiceCard } from '@/components/common/ServiceCard';
 import { SERVICES } from '@/data/mock';
 import { useI18n } from '@/context/I18nContext';
+import { Star, DollarSign, MapPin, CheckCircle2 } from 'lucide-react';
 
 export default function ServicesPage() {
   const { t } = useI18n();
@@ -78,27 +79,28 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               {
-                icon: '⭐',
+                icon: Star,
                 title: 'Agents Vérifiés',
                 description: 'Tous nos agents sont vérifiés et certifiés',
               },
               {
-                icon: '💰',
+                icon: DollarSign,
                 title: 'Prix Transparents',
                 description: 'Aucun frais caché, tarification claire',
               },
               {
-                icon: '📍',
+                icon: MapPin,
                 title: 'Suivi en Temps Réel',
                 description: 'Localisez votre agent en direct',
               },
               {
-                icon: '⭐',
+                icon: CheckCircle2,
                 title: 'Notation 5★',
                 description: 'Évaluation qualité par les clients',
               },
-            ].map((item, idx) => (
-              <motion.div
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -106,13 +108,13 @@ export default function ServicesPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 text-center"
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="text-4xl mb-4"><Icon className="w-12 h-12 mx-auto text-blue-600 dark:text-blue-400" /></div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
                   {item.title}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400">{item.description}</p>
-              </motion.div>
-            ))}
+              </motion.div>;
+            })}
           </div>
         </div>
       </section>
@@ -171,7 +173,7 @@ export default function ServicesPage() {
                   {agent.specialty}
                 </p>
                 <div className="flex justify-between items-center text-sm">
-                  <span className="text-yellow-500">⭐ {agent.rating}</span>
+                  <span className="text-yellow-500 flex items-center gap-1"><Star className="w-4 h-4" /> {agent.rating}</span>
                   <span className="text-slate-600 dark:text-slate-400">{agent.jobs} tâches</span>
                 </div>
               </motion.div>

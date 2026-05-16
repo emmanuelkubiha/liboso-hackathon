@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { COUNTRIES } from '@/data/mock';
 import { useI18n } from '@/context/I18nContext';
+import { Globe, Star, BarChart3, Handshake, Smartphone, Plane } from 'lucide-react';
 
 export default function TransborderPage() {
   const { t } = useI18n();
@@ -50,7 +51,7 @@ export default function TransborderPage() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="text-6xl mb-4">🌍</div>
+              <div className="mb-4"><Globe className="w-16 h-16 mx-auto text-purple-600" /></div>
               <p className="text-xl font-semibold text-slate-900 dark:text-white">
                 Carte interactive des pays (Intégration future)
               </p>
@@ -80,12 +81,18 @@ export default function TransborderPage() {
                 <div className="text-4xl mb-3">{['🇨🇩', '🇷🇼', '🇰🇪', '🇹🇿', '🇺🇬'][idx]}</div>
                 <h3 className="font-bold text-slate-900 dark:text-white mb-1">{country.name}</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">{country.currency}</p>
-                <span className="text-xs font-semibold">
+                <span className="text-xs font-semibold flex items-center gap-1.5">
                   {country.role === 'strategic'
-                    ? '🌟 Hub Stratégique'
+                    ? <>
+                        <Star className="w-4 h-4" /> Hub Stratégique
+                      </>
                     : country.role === 'main'
-                      ? '📊 Marché Principal'
-                      : '🤝 Partenaire'}
+                      ? <>
+                        <BarChart3 className="w-4 h-4" /> Marché Principal
+                      </>
+                      : <>
+                        <Handshake className="w-4 h-4" /> Partenaire
+                      </>}
                 </span>
               </motion.div>
             ))}
@@ -195,41 +202,44 @@ export default function TransborderPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                icon: '✈️',
+                icon: Plane,
                 title: 'Mobilité des Agents',
                 description: 'Agents certifiés pouvant travailler dans plusieurs pays',
               },
               {
-                icon: '📱',
+                icon: Smartphone,
                 title: 'Paiement Mobile Unifié',
                 description: 'Intégration multi-devise et multi-opérateurs',
               },
               {
-                icon: '🌐',
+                icon: Globe,
                 title: 'Plateforme Commune',
                 description: 'Une seule plateforme pour accéder à tous les services',
               },
               {
-                icon: '🤝',
+                icon: Handshake,
                 title: 'Partenariats Régionaux',
                 description: 'Collaboration entre pays et organisations locales',
               },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20"
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400">{item.description}</p>
-              </motion.div>
-            ))}
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20"
+                >
+                  <div className="mb-4"><Icon className="w-12 h-12 text-purple-600 dark:text-purple-400" /></div>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400">{item.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

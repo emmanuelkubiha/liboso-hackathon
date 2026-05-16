@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useI18n } from '@/context/I18nContext';
+import { Target, Rocket, Wrench, TrendingUp, Cpu, Globe, Users, Baby, Heart, Leaf, Handshake } from 'lucide-react';
 
 export default function AboutPage() {
   const { t } = useI18n();
@@ -40,8 +41,8 @@ export default function AboutPage() {
                 {t('about.mission')}
               </p>
               <div className="mt-6 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                <p className="text-lg font-semibold text-blue-900 dark:text-blue-300">
-                  🎯 Structurer et sécuriser par la technologie
+                <p className="text-lg font-semibold text-blue-900 dark:text-blue-300 flex items-center gap-2">
+                  <Target className="w-5 h-5" /> Structurer et sécuriser par la technologie
                 </p>
               </div>
             </motion.div>
@@ -58,8 +59,8 @@ export default function AboutPage() {
                 {t('about.vision')}
               </p>
               <div className="mt-6 p-6 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
-                <p className="text-lg font-semibold text-green-900 dark:text-green-300">
-                  🌍 Créer un réseau africain transfrontalier
+                <p className="text-lg font-semibold text-green-900 dark:text-green-300 flex items-center gap-2">
+                  <Globe className="w-5 h-5" /> Créer un réseau africain transfrontalier
                 </p>
               </div>
             </motion.div>
@@ -87,31 +88,33 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                icon: '👥',
+                icon: 'Users',
                 stat: '80%',
                 title: 'Économie Informelle',
                 description: 'Des travailleurs en RDC opèrent dans le secteur informel',
               },
               {
-                icon: '🏙️',
-                stat: '🚀',
+                icon: 'Rocket',
+                stat: 'Rapide',
                 title: 'Urbanisation Rapide',
                 description: 'Croissance urbaine accélérée en Afrique de l\'Est',
               },
               {
-                icon: '🔧',
-                stat: '📈',
+                icon: 'Wrench',
+                stat: 'Urgent',
                 title: 'Besoin de Structure',
                 description: 'Professionnalisation et formalisation urgente',
               },
               {
-                icon: '💻',
-                stat: '🌐',
+                icon: 'Cpu',
+                stat: 'Digitale',
                 title: 'Innovation Digitale',
                 description: 'La technologie comme catalyseur de changement',
               },
-            ].map((item, idx) => (
-              <motion.div
+            ].map((item, idx) => {
+              const IconComponents = { Users, Rocket, Wrench, Cpu };
+              const Icon = IconComponents[item.icon as keyof typeof IconComponents];
+              return <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +122,7 @@ export default function AboutPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="p-8 rounded-xl bg-white dark:bg-slate-900 shadow-lg"
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="text-5xl mb-4">{Icon && <Icon className="w-12 h-12 text-blue-600 dark:text-blue-400" />}</div>
                 <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                   {item.stat}
                 </h3>
@@ -127,8 +130,8 @@ export default function AboutPage() {
                   {item.title}
                 </h4>
                 <p className="text-slate-600 dark:text-slate-400">{item.description}</p>
-              </motion.div>
-            ))}
+              </motion.div>;
+            })}
           </div>
         </div>
       </section>
@@ -150,22 +153,28 @@ export default function AboutPage() {
           <div className="space-y-6">
             {[
               {
-                title: '👶 Inclusion des Jeunes',
+                icon: Baby,
+                title: 'Inclusion des Jeunes',
                 description: 'Accès aux premiers emplois formels et développement de compétences',
               },
               {
-                title: '👩 Autonomisation des Femmes',
+                icon: Heart,
+                title: 'Autonomisation des Femmes',
                 description: 'Opportunités entrepreneuriales et indépendance économique',
               },
               {
-                title: '🏥 Hygiène Urbaine',
+                icon: Wrench,
+                title: 'Hygiène Urbaine',
                 description: 'Services professionnels de nettoyage et gestion des déchets',
               },
               {
-                title: '🌱 Durabilité',
+                icon: Leaf,
+                title: 'Durabilité',
                 description: 'Services écologiques et responsabilité environnementale',
               },
-            ].map((item, idx) => (
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
@@ -174,12 +183,15 @@ export default function AboutPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="p-6 rounded-lg border-l-4 border-blue-600 bg-slate-50 dark:bg-slate-800"
               >
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
-                  {item.title}
-                </h3>
+                <div className="flex items-center gap-3 mb-2">
+                  <Icon className="w-6 h-6 text-blue-600" />
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                </div>
                 <p className="text-slate-600 dark:text-slate-400 text-lg">{item.description}</p>
               </motion.div>
-            ))}
+            );})}
           </div>
         </div>
       </section>
@@ -199,21 +211,23 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: '🤝',
+                icon: 'Handshake',
                 title: 'Confiance',
                 description: 'Transparence et intégrité en toutes choses',
               },
               {
-                icon: '🚀',
+                icon: 'Rocket',
                 title: 'Innovation',
                 description: 'Solutions technologiques créatives et durables',
               },
               {
-                icon: '🌍',
+                icon: 'Globe',
                 title: 'Impact Social',
                 description: 'Créer de la valeur pour tous les acteurs',
               },
-            ].map((item, idx) => (
+            ].map((item, idx) => {
+              const IconComponent = { Handshake, Rocket, Globe }[item.icon] || Rocket;
+              return (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -222,11 +236,11 @@ export default function AboutPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="p-8 rounded-xl bg-white/10 backdrop-blur border border-white/20 text-white text-center"
               >
-                <div className="text-5xl mb-4">{item.icon}</div>
+                <div className="mb-4"><IconComponent className="w-12 h-12 mx-auto" /></div>
                 <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                 <p className="text-white/80">{item.description}</p>
               </motion.div>
-            ))}
+            );})}
           </div>
         </div>
       </section>

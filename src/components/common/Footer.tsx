@@ -27,7 +27,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-300 hover:text-white transition">
+                <Link href="/a-propos" className="text-slate-300 hover:text-white transition">
                   {t('navigation.about')}
                 </Link>
               </li>
@@ -37,7 +37,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/transborder" className="text-slate-300 hover:text-white transition">
+                <Link href="/transfrontalier" className="text-slate-300 hover:text-white transition">
                   {t('navigation.transborder')}
                 </Link>
               </li>
@@ -54,7 +54,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="text-slate-300 hover:text-white transition">
+                <Link href="/equipe" className="text-slate-300 hover:text-white transition">
                   {t('navigation.team')}
                 </Link>
               </li>

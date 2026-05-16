@@ -4,10 +4,44 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SERVICES, PAYMENT_METHODS } from '@/data/mock';
 import { useI18n } from '@/context/I18nContext';
-import { ArrowRight, MapPin, Calendar, Clock, CreditCard } from 'lucide-react';
+import {
+  ArrowRight,
+  MapPin,
+  Calendar,
+  Clock,
+  CreditCard,
+  Home,
+  Building2,
+  Car,
+  Recycle,
+  Trees,
+  Building,
+  DollarSign,
+  Smartphone,
+  Star,
+} from 'lucide-react';
 
 export default function BookingPage() {
   const { t } = useI18n();
+  const serviceIconMap = {
+    'cleaning-house': Home,
+    'cleaning-office': Building2,
+    'car-wash': Car,
+    'waste-management': Recycle,
+    gardening: Trees,
+    'building-cleaning': Building,
+  } as const;
+
+  const paymentIconMap = {
+    airtel: Smartphone,
+    mpesa: Smartphone,
+    orange: DollarSign,
+    visa: CreditCard,
+    mastercard: CreditCard,
+    pos: CreditCard,
+    contactless: Smartphone,
+  } as const;
+
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     service: '',
@@ -85,28 +119,37 @@ export default function BookingPage() {
               </h2>
 
               <div className="grid md:grid-cols-2 gap-4 mb-8">
-                {SERVICES.map((service) => (
+                {SERVICES.map((service) => {
+                  const ServiceIcon = serviceIconMap[service.id as keyof typeof serviceIconMap] || Home;
+                  return (
                   <motion.div
                     key={service.id}
                     onClick={() => handleInputChange('service', service.id)}
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    transition={{ duration: 0.25 }}
                     className={`p-6 rounded-xl cursor-pointer border-2 transition-all ${
                       formData.service === service.id
-                        ? 'border-amber-600 bg-amber-50 dark:bg-amber-900/20'
+                        ? 'border-amber-600 bg-amber-50 dark:bg-amber-900/20 shadow-lg'
                         : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-600'
                     }`}
                   >
-                    <div className="text-3xl mb-3">{service.icon}</div>
+                    <div className="relative rounded-lg overflow-hidden mb-3 h-28">
+                      <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/30" />
+                      <div className="absolute left-3 top-3 p-2 rounded-full bg-white/90 dark:bg-slate-900/90">
+                        <ServiceIcon className="w-5 h-5 text-amber-600" />
+                      </div>
+                    </div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-1">{service.name}</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
                       {service.description}
                     </p>
                     <div className="flex justify-between text-sm">
                       <span className="text-amber-600 font-semibold">{service.price}</span>
-                      <span className="text-yellow-500">⭐ {service.rating}</span>
+                      <span className="text-yellow-500 flex items-center gap-1"><Star className="w-4 h-4" /> {service.rating}</span>
                     </div>
                   </motion.div>
-                ))}
+                );})}
               </div>
 
               <button
@@ -234,24 +277,29 @@ export default function BookingPage() {
               </h2>
 
               <div className="grid md:grid-cols-2 gap-4 mb-8">
-                {PAYMENT_METHODS.map((method) => (
+                {PAYMENT_METHODS.map((method) => {
+                  const PaymentIcon = paymentIconMap[method.id as keyof typeof paymentIconMap] || CreditCard;
+                  return (
                   <motion.div
                     key={method.id}
                     onClick={() => handleInputChange('paymentMethod', method.id)}
                     whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.25 }}
                     className={`p-6 rounded-xl cursor-pointer border-2 transition-all ${
                       formData.paymentMethod === method.id
-                        ? 'border-amber-600 bg-amber-50 dark:bg-amber-900/20'
+                        ? 'border-amber-600 bg-amber-50 dark:bg-amber-900/20 shadow-md'
                         : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
                     }`}
                   >
-                    <div className="text-3xl mb-3">{method.icon}</div>
+                    <div className="mb-3">
+                      <PaymentIcon className="w-8 h-8 text-amber-600" />
+                    </div>
                     <h3 className="font-bold text-slate-900 dark:text-white">{method.name}</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
                       {method.description}
                     </p>
                   </motion.div>
-                ))}
+                );})}
               </div>
 
               <div className="flex gap-4">

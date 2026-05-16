@@ -8,7 +8,22 @@ import { ServiceCard } from '@/components/common/ServiceCard';
 import { useI18n } from '@/context/I18nContext';
 import { SERVICES } from '@/data/mock';
 import { motion } from 'framer-motion';
-import { AlertCircle, Handshake, Lock, Users, Globe, DollarSign, Smartphone, CheckCircle2, Briefcase, Clipboard, BarChart3 } from 'lucide-react';
+import {
+  AlertCircle,
+  Handshake,
+  Lock,
+  Users,
+  Globe,
+  DollarSign,
+  Smartphone,
+  CheckCircle2,
+  Briefcase,
+  Clipboard,
+  BarChart3,
+  CreditCard,
+  MapPin,
+  CircleCheck,
+} from 'lucide-react';
 
 export default function HomePage() {
   const { t } = useI18n();
@@ -183,7 +198,7 @@ export default function HomePage() {
         title="Notre Impact"
         stats={[
           { value: '1,200+', label: 'Agents Certifiés', icon: Users },
-          { value: '50K+', label: 'Réservations', icon: '📋' },
+          { value: '50K+', label: 'Réservations', icon: Clipboard },
           { value: '5', label: 'Pays Couverts', icon: Globe },
           { value: '$2.5M', label: 'Revenus Générés', icon: DollarSign },
         ]}
@@ -248,28 +263,105 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: Smartphone, name: 'Airtel Money', description: 'Paiement mobile sécurisé' },
-              { icon: '💳', name: 'M-Pesa', description: 'Service de paiement rapide' },
-              { icon: '🟠', name: 'Orange Money', description: 'Paiement approuvé' },
-              { icon: DollarSign, name: 'Visa/Mastercard', description: 'Cartes internationales' },
-              { icon: '🏦', name: 'POS', description: 'Terminal de paiement' },
-              { icon: '📲', name: 'Sans Contact', description: 'Paiement instantané' },
-            ].map((method, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="text-4xl mb-4">{method.icon}</div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  {method.name}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">{method.description}</p>
-              </motion.div>
-            ))}
+              { icon: Smartphone, name: 'M-Pesa', description: 'Service de paiement rapide' },
+              { icon: DollarSign, name: 'Orange Money', description: 'Paiement approuvé' },
+              { icon: CreditCard, name: 'Visa/Mastercard', description: 'Cartes internationales' },
+              { icon: CreditCard, name: 'POS', description: 'Terminal de paiement' },
+              { icon: Smartphone, name: 'Sans Contact', description: 'Paiement instantané' },
+            ].map((method, idx) => {
+              const Icon = method.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: idx * 0.06, ease: 'easeOut' }}
+                  className="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 text-center hover:shadow-lg transition-shadow"
+                >
+                  <div className="text-4xl mb-4 flex justify-center">
+                    {typeof Icon === 'string' ? (
+                      <span>{Icon}</span>
+                    ) : (
+                      <Icon className="w-10 h-10 text-blue-600 dark:text-blue-400" />
+                    )}
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                    {method.name}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">{method.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
+        </div>
+      </section>
+
+      {/* Availability Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-8 md:p-10 shadow-xl"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/40">
+                <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+                Nous sommes disponibles partout où vous êtes
+              </h2>
+            </div>
+            <p className="text-slate-600 dark:text-slate-400 mb-8">
+              Visualisez nos services actifs en Afrique Centrale et en Afrique de l'Est.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                  <CircleCheck className="w-5 h-5 text-green-600" /> Afrique Centrale
+                </h3>
+                <div className="space-y-3">
+                  {[
+                    { flag: '🇨🇩', name: 'RDC' },
+                    { flag: '🇷🇼', name: 'Rwanda' },
+                    { flag: '🇧🇮', name: 'Burundi' },
+                    { flag: '🇨🇫', name: 'RCA' },
+                    { flag: '🇨🇬', name: 'Congo-Brazzaville' },
+                  ].map((country) => (
+                    <div key={country.name} className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-slate-800">
+                      <span className="text-lg">{country.flag}</span>
+                      <span className="flex-1 ml-3 text-slate-900 dark:text-white">{country.name}</span>
+                      <span className="text-xs text-green-700 dark:text-green-300 font-medium">Actif</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                  <CircleCheck className="w-5 h-5 text-blue-600" /> Afrique de l'Est
+                </h3>
+                <div className="space-y-3">
+                  {[
+                    { flag: '🇰🇪', name: 'Kenya' },
+                    { flag: '🇹🇿', name: 'Tanzanie' },
+                    { flag: '🇺🇬', name: 'Ouganda' },
+                    { flag: '🇪🇹', name: 'Éthiopie' },
+                    { flag: '🇸🇸', name: 'Soudan du Sud' },
+                  ].map((country) => (
+                    <div key={country.name} className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-slate-800">
+                      <span className="text-lg">{country.flag}</span>
+                      <span className="flex-1 ml-3 text-slate-900 dark:text-white">{country.name}</span>
+                      <span className="text-xs text-blue-700 dark:text-blue-300 font-medium">Actif</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -287,7 +379,7 @@ export default function HomePage() {
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <a
-                href="/booking"
+                href="/reservation"
                 className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Réserver Maintenant

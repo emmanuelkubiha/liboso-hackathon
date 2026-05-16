@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -25,6 +25,24 @@ export function Hero({
   cta2Link = '#',
   backgroundImage,
 }: HeroProps) {
+  const heroSlides = [
+    'https://images.unsplash.com/photo-1521790797524-b2497295b8a0?w=1600&h=900&fit=crop',
+    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&h=900&fit=crop',
+    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&h=900&fit=crop',
+    'https://images.unsplash.com/photo-1462899006636-339e08d1844e?w=1600&h=900&fit=crop',
+  ];
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    if (backgroundImage) {
+      return;
+    }
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [backgroundImage, heroSlides.length]);
+
   return (
     <section className="relative min-h-[80vh] pt-32 pb-20 overflow-hidden">
       {/* Background */}
@@ -37,7 +55,36 @@ export function Hero({
         </div>
       )}
       {!backgroundImage && (
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-green-500" />
+        <>
+          <div className="absolute inset-0">
+            {heroSlides.map((slide, index) => (
+              <motion.div
+                key={slide}
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide})` }}
+                animate={{ opacity: currentSlide === index ? 1 : 0 }}
+                transition={{ duration: 1.2, ease: 'easeInOut' }}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/65 via-blue-800/60 to-emerald-700/55" />
+          </div>
+
+          <motion.div
+            className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-blue-400/25 blur-3xl"
+            animate={{ x: [0, 40, 0], y: [0, -25, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute top-1/2 -right-24 w-96 h-96 rounded-full bg-emerald-400/20 blur-3xl"
+            animate={{ x: [0, -35, 0], y: [0, 30, 0] }}
+            transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute bottom-0 left-1/3 w-72 h-72 rounded-full bg-cyan-300/20 blur-3xl"
+            animate={{ x: [0, 25, 0], y: [0, -20, 0] }}
+            transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </>
       )}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
