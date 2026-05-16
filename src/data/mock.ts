@@ -295,7 +295,7 @@ export const TEAM: TeamMember[] = [
     roleEn: 'CEO',
     bio: 'Visionnaire de l\'innovation urbaine africaine',
     bioEn: 'Visionary for African urban innovation',
-    image: '/images/ali-mkumbwa-5dFuO02OHh0-unsplash.jpg',
+    image: '/images/afro-woman-holding-bucket-with-cleaning-items.jpg',
   },
   {
     id: 'tm-002',
@@ -304,7 +304,7 @@ export const TEAM: TeamMember[] = [
     roleEn: 'CTO',
     bio: 'Architecte de solutions digitales scalables',
     bioEn: 'Architect of scalable digital solutions',
-    image: '/images/zulfahmi-khani-9iH_6JO7Ufs-unsplash.jpg',
+    image: '/images/pexels-kabvisuals-35103926.jpg',
   },
   {
     id: 'tm-003',
@@ -313,6 +313,6 @@ export const TEAM: TeamMember[] = [
     roleEn: 'COO',
     bio: 'Experte en opérations régionales',
     bioEn: 'Expert in regional operations',
-    image: '/images/african-american-woman-with-braided-hair-wearing-cleaner-apron-gloves-celebrating-surprised-amazed-success-with-arms-raised-open-eyes-winner-concept.jpg',
+    image: '/images/team-silhouette.svg',
   },
 ];
