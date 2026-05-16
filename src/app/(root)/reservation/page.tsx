@@ -71,7 +71,7 @@ export default function BookingPage() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-5xl font-bold mb-4">{t('booking.title')}</h1>
-            <p className="text-xl text-orange-100">Réservez votre service en 5 étapes simples</p>
+            <p className="text-xl text-orange-100">{t('bookingSteps.selectAllSteps')}</p>
           </motion.div>
         </div>
       </section>

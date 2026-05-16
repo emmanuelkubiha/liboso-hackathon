@@ -25,6 +25,8 @@ export interface Agent {
   availability: boolean;
   image: string;
   performance: number;
+  description?: string;
+  descriptionEn?: string;
 }
 
 export interface Booking {

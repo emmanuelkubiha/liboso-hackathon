@@ -26,10 +26,10 @@ export function Hero({
   backgroundImage,
 }: HeroProps) {
   const heroSlides = [
-    'https://images.pexels.com/photos/4239032/pexels-photo-4239032.jpeg?auto=compress&cs=tinysrgb&w=1800',
-    'https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1800',
-    'https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg?auto=compress&cs=tinysrgb&w=1800',
-    'https://images.pexels.com/photos/7948034/pexels-photo-7948034.jpeg?auto=compress&cs=tinysrgb&w=1800',
+    '/images/pexels-gustavo-fring-4920286.jpg',
+    '/images/afro-woman-holding-bucket-with-cleaning-items.jpg',
+    '/images/pexels-leticia-golubov-1454213895-37553910.jpg',
+    '/images/pexels-josh_-dago__-377312171-33691597.jpg',
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 

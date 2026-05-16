@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Sun, Moon, Globe, Rocket } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, Sun, Moon, Globe } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { useI18n } from '@/context/I18nContext';
 
@@ -20,6 +21,7 @@ export function Navbar() {
     { name: t('navigation.transborder'), href: '/transfrontalier' },
     { name: t('navigation.impact'), href: '/impact' },
     { name: t('navigation.team'), href: '/equipe' },
+    { name: t('navigation.reviews'), href: '/avis' },
     { name: t('navigation.contact'), href: '/contact' },
   ];
 
@@ -29,8 +31,14 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center gap-3 font-bold text-2xl group">
-            <div className="p-2 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg group-hover:shadow-lg transition">
-              <Rocket className="w-7 h-7 text-white" />
+            <div className="p-2 bg-white rounded-lg border border-slate-200 group-hover:shadow-lg transition">
+              <Image
+                src="/images/logo-liboso.png"
+                alt="Liboso Logo"
+                width={28}
+                height={28}
+                className="w-7 h-7 object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-slate-900 dark:text-white leading-tight">LIBOSO</span>

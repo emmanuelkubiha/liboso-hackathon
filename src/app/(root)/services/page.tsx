@@ -34,9 +34,9 @@ export default function ServicesPage() {
             animate={{ opacity: 1 }}
           >
             <button className="px-4 py-2 bg-blue-600 text-white rounded-full whitespace-nowrap">
-              Tous
+              {t('serviceFilter.all')}
             </button>
-            {['Nettoyage', 'Mobilité', 'Environnement', 'Maintenance'].map((cat) => (
+            {[t('serviceFilter.cleaning'), t('serviceFilter.mobility'), t('serviceFilter.environment'), t('serviceFilter.maintenance')].map((cat) => (
               <button
                 key={cat}
                 className="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white rounded-full whitespace-nowrap hover:bg-slate-200 dark:hover:bg-slate-600 transition"
@@ -69,10 +69,10 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              Pourquoi Choisir LIBOSO?
+              {t('pages.whyChoose')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Nos services sont conçus pour être accessibles, fiables et de qualité premium
+              {t('pages.whyChooseDesc')}
             </p>
           </motion.div>
 

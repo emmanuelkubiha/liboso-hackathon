@@ -27,9 +27,10 @@
     "about": "About",
     "services": "Services",
     "transborder": "Transborder",
-    "impact": "Impact",
+    "impact": "Vision",
     "team": "Team",
     "contact": "Contact",
+    "reviews": "Reviews",
     "dashboard": "Dashboard",
     "bookNow": "Book Now",
     "signIn": "Sign In",
@@ -131,12 +132,61 @@
     "rights": "All rights reserved"
   },
   "impact": {
-    "title": "Our Social Impact",
-    "subtitle": "Transforming Africa's urban economy",
-    "jobsCreated": "Jobs Created",
-    "youthEmployment": "Youth Employment",
-    "womenEmpowerment": "Women Empowerment",
-    "urbanHygiene": "Urban Hygiene"
+    "badge": "Startup for Africa",
+    "title": "Our Vision",
+    "subtitle": "What we want to build for Africa and its people",
+    "manifestoTitle": "Why LIBOSO exists",
+    "manifestoText": "Millions of Africans lack access to formal employment, recognized qualifications, or professional networks. LIBOSO wants to change that: formalize services, train without requiring degrees, and put women at the heart of Africa's digital revolution.",
+    "pillarsTitle": "Our 5 Vision Pillars",
+    "pillarsSubtitle": "Each pillar guides our decisions, our product, and our future impact",
+    "pillar1Title": "Formal Employment & Fighting Unemployment",
+    "pillar1Desc": "Transform informal workers into certified service providers with contracts, stable income and social protection.",
+    "pillar2Title": "Training Without Degree Requirements",
+    "pillar2Desc": "Practical training accessible to everyone — whether you have a diploma or not. What matters is your motivation.",
+    "pillar3Title": "Women First",
+    "pillar3Desc": "Women make up the majority of our agent network. We train them, support them, and give them the tools to succeed.",
+    "pillar4Title": "Low-Cost Services & Digital Payments",
+    "pillar4Desc": "Accessible services with local payments: M-Pesa, Airtel Money, bank cards — no price or technology barriers.",
+    "pillar5Title": "Digital Leader in Africa",
+    "pillar5Desc": "Become one of Africa's most-used service platforms, starting with DRC, Rwanda and Kenya.",
+    "womenTitle": "Women First — Our #1 Priority",
+    "womenText": "On a continent where women are the first to suffer from unemployment and economic exclusion, LIBOSO puts women at the center of its model.",
+    "womenPoint1": "Priority access to free professional training",
+    "womenPoint2": "Personalized support to become a certified agent",
+    "womenPoint3": "Goal: 50%+ women in our agent network",
+    "womenStat1": "Target share of women agents in the network",
+    "womenStat2": "Cost to enroll in our training programs",
+    "womenStat3": "Recognized certification upon completion of each program",
+    "trainingTitle": "Practical Training With No Prerequisites",
+    "trainingSubtitle": "No degree required. Just your motivation and time.",
+    "training1": "Fast Certification",
+    "training1Desc": "Short modules (1 to 4 weeks) to quickly enter the job market.",
+    "training2": "Field Mentorship",
+    "training2Desc": "Each learner is accompanied by an experienced agent in the field.",
+    "training3": "Career Progression",
+    "training3Desc": "From basic agent to supervisor, then trainer — a real career path.",
+    "training4": "Employment Upon Completion",
+    "training4Desc": "Our goal: 100% of graduates integrated into our network or partner companies.",
+    "leaderTitle": "Becoming a Digital Leader in Africa",
+    "leaderText": "LIBOSO is not just an app. It is infrastructure for African urban services — scalable, bilingual, and cross-border.",
+    "leaderRoleDRC": "Main market & historical HQ",
+    "leaderRoleRW": "Regional innovation hub",
+    "leaderRoleKE": "East Africa expansion",
+    "digital1": "100% Online",
+    "digital1Desc": "Booking, payment, tracking — all from your phone, no travel required.",
+    "digital2": "Accessible Local Payments",
+    "digital2Desc": "Integration of M-Pesa, Airtel Money, Orange Money, bank cards and low-cost payments.",
+    "oddTitle": "Aligned with UN SDGs",
+    "oddSubtitle": "Our vision directly aligns with the Sustainable Development Goals",
+    "odd1": "No Poverty",
+    "odd5": "Gender Equality",
+    "odd8": "Decent Work",
+    "odd9": "Innovation",
+    "odd10": "Reduced Inequalities",
+    "ctaTitle": "Join the LIBOSO Vision",
+    "ctaText": "Whether you are a client, agent, investor or partner — there is a place for you in this African revolution.",
+    "ctaBtn1": "Book a service",
+    "ctaBtn2": "Contact us"
   },
   "transborder": {
     "title": "African Transborder Network",
@@ -159,5 +209,214 @@
     "urbanization": "Rapid African urbanization",
     "needStructure": "Need for structure and professionalization",
     "digitalInnovation": "Digital innovation for economic inclusion"
+  },
+  "feedback": {
+    "title": "Your Reviews & Testimonials",
+    "subtitle": "Share your experience with our services",
+    "writeReview": "Write a Review",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "serviceUsed": "Service Used",
+    "rating": "Rating",
+    "comment": "Your Review",
+    "submitReview": "Submit Review",
+    "recentFeedback": "Recent Reviews",
+    "noFeedback": "No reviews yet",
+    "recommended": "Recommended",
+    "notRecommended": "Not Recommended"
+  },
+  "agents": {
+    "title": "Our Available Agents",
+    "subtitle": "Select an agent for your service",
+    "selectAgent": "Select an Agent",
+    "availability": "Availability",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "completedJobs": "Completed Bookings",
+    "performanceScore": "Performance Score",
+    "rating": "Rating",
+    "services": "Services",
+    "description": "Description",
+    "contact": "Contact",
+    "bookWithAgent": "Book with this Agent",
+    "noAgentsAvailable": "No agents available for this service"
+  },
+  "chat": {
+    "title": "Customer Support",
+    "subtitle": "Ask a question or select an option",
+    "intro": "I am an AI agent. I answer your questions and I can connect you with a LIBOSO agent.",
+    "startConversation": "Start a Conversation",
+    "selectAgent": "Select an Agent",
+    "questionServices": "What services do you offer?",
+    "questionBooking": "How do I make a booking?",
+    "questionPricing": "How does pricing work?",
+    "questionConnectAgent": "I want to talk to a LIBOSO agent",
+    "messageHere": "Your message here...",
+    "sendMessage": "Send",
+    "typing": "Typing...",
+    "onlineSupport": "Online Support",
+    "offline": "Offline",
+    "online": "Online",
+    "responseServices": "We offer home cleaning, office cleaning, car wash, waste management, gardening, and other urban services.",
+    "responseBooking": "To book, open the Booking page, choose a service, date, time and payment method, then confirm.",
+    "responsePricing": "Pricing depends on the service, location, and duration. You get a clear estimate before confirmation.",
+    "responseConnectAgent": "Great. I can connect you with an available LIBOSO agent. Please share your service need and location.",
+    "freeTextReply": "Thanks for your message. I am an AI agent and I can also connect you with a LIBOSO agent if needed."
+  },
+  "bookingSteps": {
+    "step1Title": "Select Service",
+    "step2Title": "Choose Date",
+    "step3Title": "Choose Time",
+    "step4Title": "Select Payment",
+    "step5Title": "Confirm",
+    "bookingConfirmed": "Booking Confirmed",
+    "bookingSuccessful": "Your booking has been successfully recorded",
+    "selectAllSteps": "Book your service in 5 simple steps"
+  },
+  "serviceFilter": {
+    "all": "All Services",
+    "cleaning": "Cleaning",
+    "mobility": "Mobility",
+    "environment": "Environment",
+    "maintenance": "Maintenance"
+  },
+  "pages": {
+    "problemTitle": "The Challenge",
+    "problemSubtitle": "In the Democratic Republic of Congo, the informal economy dominates most urban service activities: cleaning, street commerce, small repair services, car washing, and domestic services.",
+    "problemClickHint": "Click each red point to read details.",
+    "problemReadMore": "Click to read",
+    "problemTimeline": {
+      "step1Title": "Informal sector dominance in DRC",
+      "step1Desc": "● About 80% of workers in DRC operate in the informal sector.\n● Nearly 2.9 million informal businesses exist in urban areas.\n● Cleaning, street commerce, and related services represent around 11.2% of informal activities.",
+      "step2Title": "Strong urban growth",
+      "step2Desc": "● Urban population growth: 4.5% to 4.6% per year.\n● Urban population: over 50 million inhabitants.",
+      "step3Title": "Rising service demand",
+      "step3Desc": "Rapid urbanization increases demand for:\n● Car washing\n● Home and office cleaning\n● Gardening\n● Waste management\n● Digital booking services",
+      "step4Title": "Real market opportunity",
+      "step4Desc": "The cleaning and urban services market in DRC is large and growing because:\n● Cities are developing quickly\n● Most services remain informal\n● There is a shortage of reliable, digitized providers\n\nSources:\n● African Development Bank report\n● UN-Habitat urbanization data\n● Macrotrends urban population data"
+    },
+    "availabilityDarkTitle": "Availability Countries in East Africa",
+    "availabilityDarkSubtitle": "Regional priority rollout, with operational focus on Eastern DRC and neighboring corridors.",
+    "availabilityClickHint": "Click a point to see the available country.",
+    "availabilityCountries": {
+      "drcEast": "DRC (East)",
+      "rwanda": "Rwanda",
+      "burundi": "Burundi",
+      "uganda": "Uganda",
+      "kenya": "Kenya",
+      "tanzania": "Tanzania"
+    },
+    "whyChoose": "Why Choose LIBOSO?",
+    "whyChooseDesc": "Our services are designed to be accessible, reliable and premium quality",
+    "bookNowCTA": "Book Now",
+    "readyToStart": "Ready to Get Started?",
+    "joinRevolution": "Join the revolution of African urban services",
+    "contactUs": "Contact Us",
+    "howItWorksTitle": "How It Works",
+    "howItWorksSubtitle": "A simple and secure 4-step process",
+    "howItWorks": {
+      "step1Title": "Select",
+      "step1Desc": "Choose a service from our certified catalog",
+      "step2Title": "Locate",
+      "step2Desc": "Enter your address for at-home service",
+      "step3Title": "Pay",
+      "step3Desc": "Secure mobile payment in one click",
+      "step4Title": "Enjoy",
+      "step4Desc": "Rate the service and keep your preferred agent"
+    },
+    "objectivesBadge": "Startup in progress",
+    "objectivesTitleStart": "Our",
+    "objectivesTitleHighlight": "Objectives",
+    "objectivesSubtitle": "What we want to achieve for Africa. Not tomorrow — now.",
+    "objectiveCards": {
+      "card1": {
+        "unit": "agents",
+        "title": "Trained & certified agents",
+        "desc": "Our year-1 target: train 10,000 certified providers ready to work with contracts and social protection.",
+        "badge": "Year 1 Target"
+      },
+      "card2": {
+        "unit": "women",
+        "title": "Women in the network",
+        "desc": "Women are at the heart of LIBOSO. Our target: they represent more than half of our certified agents.",
+        "badge": "Top priority"
+      },
+      "card3": {
+        "unit": "countries",
+        "title": "Cross-border coverage",
+        "desc": "DRC, Rwanda, Kenya, Tanzania, Uganda — a connected regional network of formalized urban services.",
+        "badge": "African vision"
+      },
+      "card4": {
+        "unit": "enrollment",
+        "title": "Free training programs",
+        "desc": "Zero barriers. No degree required. Just your motivation to join our network and access formal work.",
+        "badge": "No prerequisites"
+      }
+    },
+    "objectiveReasons": {
+      "reason1": {
+        "title": "Fast growth",
+        "desc": "A 1.4 billion-person market, underserved and rapidly urbanizing."
+      },
+      "reason2": {
+        "title": "Community impact",
+        "desc": "Each trained agent changes a family’s life. The multiplier effect is real."
+      },
+      "reason3": {
+        "title": "Accessible technology",
+        "desc": "Simple mobile app, local payment integration, and zero friction for users."
+      }
+    },
+    "solutionTitle": "Our Solution: LIBOSO",
+    "solutionSubtitle": "A digital platform that formalizes, connects, and secures urban services in Africa",
+    "solutionCards": {
+      "formalization": {
+        "title": "Formalization",
+        "description": "Structuring providers and professionalizing services"
+      },
+      "security": {
+        "title": "Security & Trust",
+        "description": "Identity verification and a transparent rating system"
+      },
+      "professionalization": {
+        "title": "Professionalization",
+        "description": "Training, certification, and professional management tools"
+      }
+    },
+    "viewAllServices": "View All Services",
+    "paymentCards": {
+      "airtel": "Secure mobile payment",
+      "mpesa": "Fast payment service",
+      "orange": "Trusted payment",
+      "visa": "International cards",
+      "pos": "Point-of-sale terminal",
+      "cashless": "Instant cashless payment"
+    },
+    "availabilityPanel": {
+      "title": "We are available wherever you are",
+      "subtitle": "See our active services across Central Africa and East Africa.",
+      "mapLabel": "Coverage map",
+      "liveCoverage": "Live active coverage",
+      "description": "Our teams operate in major cities with a network of certified agents and secure payment.",
+      "countries": "Countries",
+      "availability": "Availability",
+      "reliability": "Reliability",
+      "centralAfrica": "Central Africa",
+      "eastAfrica": "East Africa",
+      "active": "Active"
+    },
+    "countryNames": {
+      "drc": "DRC",
+      "rwanda": "Rwanda",
+      "burundi": "Burundi",
+      "rca": "CAR",
+      "congoBrazzaville": "Congo-Brazzaville",
+      "kenya": "Kenya",
+      "tanzania": "Tanzania",
+      "uganda": "Uganda",
+      "ethiopia": "Ethiopia",
+      "southSudan": "South Sudan"
+    }
   }
 }

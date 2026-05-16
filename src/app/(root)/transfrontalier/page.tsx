@@ -7,7 +7,7 @@ import { useI18n } from '@/context/I18nContext';
 import { Globe, Star, BarChart3, Handshake, Smartphone, Plane } from 'lucide-react';
 
 export default function TransborderPage() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
 
   return (
     <div className="pt-24 pb-20">
@@ -18,10 +18,27 @@ export default function TransborderPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-5xl font-bold mb-4">Réseau Transfrontalier Africain</h1>
+            <h1 className="text-5xl font-bold mb-4">{t('transborder.title')}</h1>
             <p className="text-xl text-pink-100">
-              Connecter les services urbains à travers l'Afrique de l'Est
+              {t('transborder.subtitle')}
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="mt-8 flex flex-wrap justify-center gap-2"
+          >
+            {COUNTRIES.map((country, idx) => (
+              <span
+                key={country.code}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur text-sm font-medium"
+              >
+                <span>{['🇨🇩', '🇷🇼', '🇰🇪', '🇹🇿', '🇺🇬'][idx]}</span>
+                <span>{language === 'en' ? country.nameEn : country.name}</span>
+              </span>
+            ))}
           </motion.div>
         </div>
       </section>

@@ -27,9 +27,10 @@
     "about": "À propos",
     "services": "Services",
     "transborder": "Transfrontalier",
-    "impact": "Impact",
+    "impact": "Vision",
     "team": "Équipe",
     "contact": "Contact",
+    "reviews": "Avis",
     "dashboard": "Tableau de bord",
     "bookNow": "Réserver maintenant",
     "signIn": "Connexion",
@@ -131,12 +132,61 @@
     "rights": "Tous droits réservés"
   },
   "impact": {
-    "title": "Notre Impact Social",
-    "subtitle": "Transformation de l'économie urbaine africaine",
-    "jobsCreated": "Emplois créés",
-    "youthEmployment": "Emploi des jeunes",
-    "womenEmpowerment": "Autonomisation des femmes",
-    "urbanHygiene": "Hygiène urbaine"
+    "badge": "Startup pour l'Afrique",
+    "title": "Notre Vision",
+    "subtitle": "Ce que nous voulons construire pour l'Afrique et ses populations",
+    "manifestoTitle": "Pourquoi LIBOSO existe",
+    "manifestoText": "Des millions d'Africain(e)s n'ont pas accès à un emploi formel, pas de diplôme reconnu, pas de réseau. LIBOSO veut changer cela : formaliser les services, former sans condition de diplôme, et placer les femmes au cœur de la révolution digitale africaine.",
+    "pillarsTitle": "Nos 5 Piliers de Vision",
+    "pillarsSubtitle": "Chaque pilier guide nos décisions, notre produit et notre impact futur",
+    "pillar1Title": "Emploi Formel & Lutte contre le Chômage",
+    "pillar1Desc": "Transformer les travailleurs informels en prestataires certifiés avec contrat, revenus stables et protection sociale.",
+    "pillar2Title": "Formation Sans Diplôme Requis",
+    "pillar2Desc": "Offrir des formations pratiques accessibles à tous — que vous ayez le bac ou pas. Ce qui compte, c'est votre motivation.",
+    "pillar3Title": "Les Femmes d'Abord",
+    "pillar3Desc": "Les femmes représentent la majorité de notre réseau d'agents. Nous les formons, les accompagnons et leur donnons les outils pour entreprendre.",
+    "pillar4Title": "Services à Bas Coût & Paiements Digitaux",
+    "pillar4Desc": "Des services accessibles avec des paiements locaux : M-Pesa, Airtel Money, carte bancaire — aucune barrière de prix ou de technologie.",
+    "pillar5Title": "Leader Digital en Afrique",
+    "pillar5Desc": "Devenir l'une des plateformes de services les plus utilisées en Afrique, en commençant par la RDC, le Rwanda et le Kenya.",
+    "womenTitle": "Les Femmes d'Abord — Notre Priorité #1",
+    "womenText": "Dans un continent où les femmes sont les premières à souffrir du chômage et de l'exclusion économique, LIBOSO met les femmes au centre de son modèle.",
+    "womenPoint1": "Accès prioritaire aux formations professionnelles gratuites",
+    "womenPoint2": "Accompagnement personnalisé pour devenir agente certifiée",
+    "womenPoint3": "Objectif : 50%+ de femmes dans notre réseau d'agents",
+    "womenStat1": "Objectif femmes agents dans le réseau",
+    "womenStat2": "Coût d'inscription à nos formations",
+    "womenStat3": "Certification reconnue à la fin de chaque parcours",
+    "trainingTitle": "Formations Pratiques Sans Condition",
+    "trainingSubtitle": "Aucun diplôme requis. Juste votre motivation et votre temps.",
+    "training1": "Certification Rapide",
+    "training1Desc": "Des modules courts (1 à 4 semaines) pour intégrer rapidement le marché du travail.",
+    "training2": "Mentorat Terrain",
+    "training2Desc": "Chaque apprenant est suivi par un agent expérimenté sur le terrain.",
+    "training3": "Progression de Carrière",
+    "training3Desc": "De simple agent à superviseur, puis formateur — une vraie trajectoire.",
+    "training4": "Emploi Garanti à l'Issue",
+    "training4Desc": "Notre objectif : 100% des formés intégrés dans notre réseau ou chez des partenaires.",
+    "leaderTitle": "Devenir un Leader Digital Africain",
+    "leaderText": "LIBOSO n'est pas juste une app. C'est une infrastructure pour les services urbains africains — scalable, bilingue, transfrontalière.",
+    "leaderRoleDRC": "Marché principal & siège historique",
+    "leaderRoleRW": "Hub régional d'innovation",
+    "leaderRoleKE": "Expansion en Afrique de l'Est",
+    "digital1": "100% En Ligne",
+    "digital1Desc": "Réservation, paiement, suivi — tout se fait depuis son téléphone, sans se déplacer.",
+    "digital2": "Paiements Locaux Accessibles",
+    "digital2Desc": "Intégration de M-Pesa, Airtel Money, Orange Money, carte bancaire et paiements à bas coût.",
+    "oddTitle": "Aligné sur les ODD de l'ONU",
+    "oddSubtitle": "Notre vision s'inscrit directement dans les Objectifs de Développement Durable",
+    "odd1": "Pas de Pauvreté",
+    "odd5": "Égalité des Genres",
+    "odd8": "Travail Décent",
+    "odd9": "Innovation",
+    "odd10": "Inégalités Réduites",
+    "ctaTitle": "Rejoignez la Vision LIBOSO",
+    "ctaText": "Que vous soyez client, agent, investisseur ou partenaire — il y a une place pour vous dans cette révolution africaine.",
+    "ctaBtn1": "Réserver un service",
+    "ctaBtn2": "Nous contacter"
   },
   "transborder": {
     "title": "Réseau Transfrontalier Africain",
@@ -159,5 +209,214 @@
     "urbanization": "Urbanisation rapide africaine",
     "needStructure": "Besoin de structuration et professionnalisation",
     "digitalInnovation": "Innovation digitale pour l'inclusion économique"
+  },
+  "feedback": {
+    "title": "Vos Avis & Témoignages",
+    "subtitle": "Partagez votre expérience avec nos services",
+    "writeReview": "Écrire un avis",
+    "yourName": "Votre nom",
+    "yourEmail": "Votre email",
+    "serviceUsed": "Service utilisé",
+    "rating": "Évaluation",
+    "comment": "Votre avis",
+    "submitReview": "Soumettre l'avis",
+    "recentFeedback": "Avis récents",
+    "noFeedback": "Aucun avis pour le moment",
+    "recommended": "Recommandé",
+    "notRecommended": "Non recommandé"
+  },
+  "agents": {
+    "title": "Nos Agents Disponibles",
+    "subtitle": "Sélectionnez un agent pour votre service",
+    "selectAgent": "Sélectionner un agent",
+    "availability": "Disponibilité",
+    "available": "Disponible",
+    "unavailable": "Non disponible",
+    "completedJobs": "Réservations complétées",
+    "performanceScore": "Score de performance",
+    "rating": "Évaluation",
+    "services": "Services",
+    "description": "Description",
+    "contact": "Contacter",
+    "bookWithAgent": "Réserver avec cet agent",
+    "noAgentsAvailable": "Aucun agent disponible pour ce service"
+  },
+  "chat": {
+    "title": "Support Client",
+    "subtitle": "Posez une question ou sélectionnez une option",
+    "intro": "Je suis un agent AI. Je réponds à vos questions et je peux vous connecter avec un agent LIBOSO.",
+    "startConversation": "Démarrer une conversation",
+    "selectAgent": "Sélectionner un agent",
+    "questionServices": "Quels services proposez-vous ?",
+    "questionBooking": "Comment faire une réservation ?",
+    "questionPricing": "Comment fonctionnent les prix ?",
+    "questionConnectAgent": "Je veux parler à un agent LIBOSO",
+    "messageHere": "Votre message ici...",
+    "sendMessage": "Envoyer",
+    "typing": "En train de taper...",
+    "onlineSupport": "Support en ligne",
+    "offline": "Hors ligne",
+    "online": "En ligne",
+    "responseServices": "Nous proposons le nettoyage maison, nettoyage bureau, lavage auto, gestion des déchets, jardinage et autres services urbains.",
+    "responseBooking": "Pour réserver, ouvrez la page Réservation, choisissez le service, la date, l'heure et le mode de paiement puis confirmez.",
+    "responsePricing": "Les prix varient selon le service, la zone et la durée. Vous voyez une estimation claire avant confirmation.",
+    "responseConnectAgent": "Parfait. Je peux vous connecter avec un agent LIBOSO disponible. Indiquez votre service et votre localisation.",
+    "freeTextReply": "Merci pour votre message. Je suis un agent AI et je peux aussi vous connecter avec un agent LIBOSO si besoin."
+  },
+  "bookingSteps": {
+    "step1Title": "Sélectionner le service",
+    "step2Title": "Choisir une date",
+    "step3Title": "Choisir l'heure",
+    "step4Title": "Sélectionner le paiement",
+    "step5Title": "Confirmer",
+    "bookingConfirmed": "Réservation confirmée",
+    "bookingSuccessful": "Votre réservation a été enregistrée avec succès",
+    "selectAllSteps": "Réservez votre service en 5 étapes simples"
+  },
+  "serviceFilter": {
+    "all": "Tous les services",
+    "cleaning": "Nettoyage",
+    "mobility": "Mobilité",
+    "environment": "Environnement",
+    "maintenance": "Maintenance"
+  },
+  "pages": {
+    "problemTitle": "Le Problème",
+    "problemSubtitle": "En République Démocratique du Congo, l’économie informelle domine la majorité des activités de services urbains : nettoyage, commerce de rue, petits services de réparation, lavage de voitures et services domestiques.",
+    "problemClickHint": "Cliquez sur chaque point rouge pour lire le détail.",
+    "problemReadMore": "Cliquez pour lire",
+    "problemTimeline": {
+      "step1Title": "Secteur informel dominant en RDC",
+      "step1Desc": "● Environ 80 % des travailleurs en RDC évoluent dans le secteur informel.\n● Près de 2,9 millions d’entreprises informelles existent dans les zones urbaines.\n● Les services de nettoyage, commerce de rue et services similaires représentent environ 11,2 % des activités informelles.",
+      "step2Title": "Croissance urbaine forte",
+      "step2Desc": "● Croissance de la population urbaine : 4,5 % à 4,6 % par an.\n● Population urbaine : plus de 50 millions d’habitants.",
+      "step3Title": "Demande de services en hausse",
+      "step3Desc": "L’urbanisation rapide augmente la demande pour :\n● Le lavage de voitures\n● Le nettoyage des maisons et bureaux\n● Le jardinage\n● La gestion des déchets\n● Les services de réservation digitale",
+      "step4Title": "Opportunité de marché réelle",
+      "step4Desc": "Le marché du nettoyage et des services urbains en RDC est vaste et en croissance :\n● Les villes se développent rapidement\n● La majorité des services reste informelle\n● Il existe un manque de prestataires fiables et digitalisés\n\nSources :\n● Rapport de la Banque Africaine de Développement\n● Données d’urbanisation de l’ONU-Habitat\n● Données de population urbaine Macrotrends"
+    },
+    "availabilityDarkTitle": "Pays de disponibilité en Afrique de l'Est",
+    "availabilityDarkSubtitle": "Déploiement prioritaire régional, avec un focus opérationnel sur l'Est de la RDC et les corridors voisins.",
+    "availabilityClickHint": "Cliquez sur un point pour voir le pays disponible.",
+    "availabilityCountries": {
+      "drcEast": "RDC (Est)",
+      "rwanda": "Rwanda",
+      "burundi": "Burundi",
+      "uganda": "Ouganda",
+      "kenya": "Kenya",
+      "tanzania": "Tanzanie"
+    },
+    "whyChoose": "Pourquoi Choisir LIBOSO?",
+    "whyChooseDesc": "Nos services sont conçus pour être accessibles, fiables et de qualité premium",
+    "bookNowCTA": "Réserver Maintenant",
+    "readyToStart": "Prêt à Commencer?",
+    "joinRevolution": "Rejoignez la révolution des services urbains africains",
+    "contactUs": "Nous Contacter",
+    "howItWorksTitle": "Comment Ça Marche",
+    "howItWorksSubtitle": "Un processus simple et sécurisé en 4 étapes",
+    "howItWorks": {
+      "step1Title": "Sélectionner",
+      "step1Desc": "Choisir un service parmi notre catalogue certifié",
+      "step2Title": "Localiser",
+      "step2Desc": "Indiquer votre adresse pour un service à domicile",
+      "step3Title": "Payer",
+      "step3Desc": "Paiement mobile sécurisé en un clic",
+      "step4Title": "Profiter",
+      "step4Desc": "Évaluer le service et fidéliser votre agent"
+    },
+    "objectivesBadge": "Startup en construction",
+    "objectivesTitleStart": "Nos",
+    "objectivesTitleHighlight": "Objectifs",
+    "objectivesSubtitle": "Ce que nous voulons accomplir pour l'Afrique. Pas demain — maintenant.",
+    "objectiveCards": {
+      "card1": {
+        "unit": "agents",
+        "title": "Agents formés & certifiés",
+        "desc": "Notre objectif année 1 : former 10 000 prestataires certifiés, prêts à travailler avec contrat et protection sociale.",
+        "badge": "Objectif An 1"
+      },
+      "card2": {
+        "unit": "femmes",
+        "title": "Femmes dans le réseau",
+        "desc": "Les femmes sont au cœur de LIBOSO. Notre cible : elles représentent plus de la moitié de nos agents certifiés.",
+        "badge": "Priorité absolue"
+      },
+      "card3": {
+        "unit": "pays",
+        "title": "Couverture transfrontalière",
+        "desc": "RDC, Rwanda, Kenya, Tanzanie, Ouganda — un réseau régional interconnecté de services urbains formalisés.",
+        "badge": "Vision africaine"
+      },
+      "card4": {
+        "unit": "inscription",
+        "title": "Formations gratuites",
+        "desc": "Zéro barrière. Zéro diplôme requis. Juste ta motivation pour intégrer notre réseau et décrocher un emploi formel.",
+        "badge": "Sans condition"
+      }
+    },
+    "objectiveReasons": {
+      "reason1": {
+        "title": "Croissance rapide",
+        "desc": "Un marché de 1,4 milliard de personnes, sous-servi et en pleine urbanisation."
+      },
+      "reason2": {
+        "title": "Impact communautaire",
+        "desc": "Chaque agent formé change la vie d'une famille. L'effet multiplicateur est réel."
+      },
+      "reason3": {
+        "title": "Technologie accessible",
+        "desc": "Application mobile simple, paiements locaux intégrés, zéro friction pour l'utilisateur."
+      }
+    },
+    "solutionTitle": "Notre Solution : LIBOSO",
+    "solutionSubtitle": "Une plateforme digitale qui formalise, connecte et sécurise les services urbains en Afrique",
+    "solutionCards": {
+      "formalization": {
+        "title": "Formalisation",
+        "description": "Structuration des prestataires et professionnalisation des services"
+      },
+      "security": {
+        "title": "Sécurité & Confiance",
+        "description": "Vérification d'identité et système de notation transparent"
+      },
+      "professionalization": {
+        "title": "Professionnalisation",
+        "description": "Formation, certification et outils de gestion professionnels"
+      }
+    },
+    "viewAllServices": "Voir Tous les Services",
+    "paymentCards": {
+      "airtel": "Paiement mobile sécurisé",
+      "mpesa": "Service de paiement rapide",
+      "orange": "Paiement approuvé",
+      "visa": "Cartes internationales",
+      "pos": "Terminal de paiement",
+      "cashless": "Paiement instantané"
+    },
+    "availabilityPanel": {
+      "title": "Nous sommes disponibles partout où vous êtes",
+      "subtitle": "Visualisez nos services actifs en Afrique Centrale et en Afrique de l'Est.",
+      "mapLabel": "Carte de couverture",
+      "liveCoverage": "Couverture active en temps réel",
+      "description": "Nos équipes interviennent dans les grandes villes avec un réseau d'agents certifiés et paiement sécurisé.",
+      "countries": "Pays",
+      "availability": "Disponibilité",
+      "reliability": "Fiabilité",
+      "centralAfrica": "Afrique Centrale",
+      "eastAfrica": "Afrique de l'Est",
+      "active": "Actif"
+    },
+    "countryNames": {
+      "drc": "RDC",
+      "rwanda": "Rwanda",
+      "burundi": "Burundi",
+      "rca": "RCA",
+      "congoBrazzaville": "Congo-Brazzaville",
+      "kenya": "Kenya",
+      "tanzania": "Tanzanie",
+      "uganda": "Ouganda",
+      "ethiopia": "Éthiopie",
+      "southSudan": "Soudan du Sud"
+    }
   }
 }

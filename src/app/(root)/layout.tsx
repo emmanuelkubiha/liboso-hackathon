@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
+import { ChatBox } from '@/components/common/ChatBox';
 
 export default function RootPageLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootPageLayout({
       <main className="flex-1">
         {children}
       </main>
+      <ChatBox />
       <Footer />
     </>
   );
