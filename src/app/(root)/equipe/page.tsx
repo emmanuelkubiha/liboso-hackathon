@@ -165,15 +165,15 @@ export default function TeamPage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-4">Rejoignez-Nous</h2>
+            <h2 className="text-4xl font-bold mb-4">{t('teamPage.hiringTitle')}</h2>
             <p className="text-2xl text-purple-100 mb-8">
-              Nous recrutons pour transformer l'Afrique
+              {t('teamPage.hiringSubtitle')}
             </p>
             <a
               href="mailto:jobs@liboso.com"
               className="inline-flex px-8 py-3 bg-white text-indigo-600 font-bold rounded-lg hover:bg-purple-50 transition-colors"
             >
-              Voir les Offres d'Emploi
+              {t('teamPage.hiringCTA')}
             </a>
           </motion.div>
         </div>

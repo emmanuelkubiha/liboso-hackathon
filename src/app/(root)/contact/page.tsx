@@ -2,8 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useI18n } from '@/context/I18nContext';
 
 export default function ContactPage() {
+  const { t } = useI18n();
   return (
     <div className="pt-24 pb-20">
       {/* Hero */}
@@ -13,8 +15,8 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-5xl font-bold mb-4">Nous Contacter</h1>
-            <p className="text-xl text-cyan-100">Parlons de votre vision pour les services urbains africains</p>
+            <h1 className="text-5xl font-bold mb-4">{t('contactPage.contactTitle')}</h1>
+            <p className="text-xl text-cyan-100">{t('contactPage.contactSubtitle')}</p>
           </motion.div>
         </div>
       </section>
@@ -29,50 +31,50 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Envoyez-nous un Message</h2>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">{t('contactPage.sendMessage')}</h2>
 
               <form className="space-y-4">
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
-                    Nom Complet
+                    {t('contactPage.fullName')}
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="Votre nom"
+                    placeholder={t('contactPage.yourName')}
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
-                    Email
+                    {t('contactPage.emailLabel')}
                   </label>
                   <input
                     type="email"
                     className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="votre@email.com"
+                    placeholder="your@email.com"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
-                    Sujet
+                    {t('contactPage.subject')}
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="Sujet de votre message"
+                    placeholder={t('contactPage.subjectPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
-                    Message
+                    {t('contactPage.message')}
                   </label>
                   <textarea
                     rows={5}
                     className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="Votre message..."
+                    placeholder={t('contactPage.messagePlaceholder')}
                   />
                 </div>
 
@@ -80,7 +82,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-lg transition-colors"
                 >
-                  Envoyer le Message
+                  {t('contactPage.sendButton')}
                 </button>
               </form>
             </motion.div>

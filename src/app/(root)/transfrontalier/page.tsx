@@ -53,10 +53,10 @@ export default function TransborderPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              Notre Région d'Opération
+              {t('transborderSection.operationRegion')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              5 pays africains, 1 vision commune : formaliser les services urbains
+              {t('transborderSection.operationRegionDesc')}
             </p>
           </motion.div>
 
@@ -70,10 +70,10 @@ export default function TransborderPage() {
             >
               <div className="mb-4"><Globe className="w-16 h-16 mx-auto text-purple-600" /></div>
               <p className="text-xl font-semibold text-slate-900 dark:text-white">
-                Carte interactive des pays (Intégration future)
+                {t('transborderSection.mapTitle')}
               </p>
               <p className="text-slate-600 dark:text-slate-400 mt-2">
-                5 pays - 15M+ habitants - Écosystème commun
+                {t('transborderSection.mapDesc')}
               </p>
             </motion.div>
           </div>
@@ -101,14 +101,14 @@ export default function TransborderPage() {
                 <span className="text-xs font-semibold flex items-center gap-1.5">
                   {country.role === 'strategic'
                     ? <>
-                        <Star className="w-4 h-4" /> Hub Stratégique
+                        <Star className="w-4 h-4" /> {t('transborderSection.strategicHub')}
                       </>
                     : country.role === 'main'
                       ? <>
-                        <BarChart3 className="w-4 h-4" /> Marché Principal
+                        <BarChart3 className="w-4 h-4" /> {t('transborderSection.mainMarket')}
                       </>
                       : <>
-                        <Handshake className="w-4 h-4" /> Partenaire
+                        <Handshake className="w-4 h-4" /> {t('transborderSection.partner')}
                       </>}
                 </span>
               </motion.div>
@@ -127,7 +127,7 @@ export default function TransborderPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              Positionnement Stratégique
+              {t('transborderSection.strategicPosition')}
             </h2>
           </motion.div>
 
@@ -209,10 +209,10 @@ export default function TransborderPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              Interconnexion Régionale
+              {t('transborderSection.interconnection')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Mobilité transfrontalière des agents et services
+              {t('transborderSection.interconnectionDesc')}
             </p>
           </motion.div>
 

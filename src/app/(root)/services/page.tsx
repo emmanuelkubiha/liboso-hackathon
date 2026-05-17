@@ -80,23 +80,23 @@ export default function ServicesPage() {
             {[
               {
                 icon: Star,
-                title: 'Agents Vérifiés',
-                description: 'Tous nos agents sont vérifiés et certifiés',
+                titleKey: 'servicesFeatures.verifiedAgents',
+                descKey: 'servicesFeatures.verifiedAgentsDesc',
               },
               {
                 icon: DollarSign,
-                title: 'Prix Transparents',
-                description: 'Aucun frais caché, tarification claire',
+                titleKey: 'servicesFeatures.transparentPricing',
+                descKey: 'servicesFeatures.transparentPricingDesc',
               },
               {
                 icon: MapPin,
-                title: 'Suivi en Temps Réel',
-                description: 'Localisez votre agent en direct',
+                titleKey: 'servicesFeatures.realTimeTracking',
+                descKey: 'servicesFeatures.realTimeTrackingDesc',
               },
               {
                 icon: CheckCircle2,
-                title: 'Notation 5★',
-                description: 'Évaluation qualité par les clients',
+                titleKey: 'servicesFeatures.quality5Stars',
+                descKey: 'servicesFeatures.quality5StarsDesc',
               },
             ].map((item, idx) => {
               const Icon = item.icon;
@@ -110,9 +110,9 @@ export default function ServicesPage() {
               >
                 <div className="text-4xl mb-4"><Icon className="w-12 h-12 mx-auto text-blue-600 dark:text-blue-400" /></div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  {item.title}
+                  {t(item.titleKey)}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400">{item.description}</p>
+                <p className="text-slate-600 dark:text-slate-400">{t(item.descKey)}</p>
               </motion.div>;
             })}
           </div>
@@ -129,10 +129,10 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              Agents Top Rated
+              {t('servicesFeatures.topRatedAgents')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400">
-              Nos meilleurs prestataires à votre service
+              {t('servicesFeatures.topRatedAgentsDesc')}
             </p>
           </motion.div>
 
