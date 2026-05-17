@@ -8,13 +8,13 @@ export function Footer() {
   const { t } = useI18n();
 
   return (
-    <footer className="bg-slate-900 dark:bg-black text-white">
+    <footer className="bg-white dark:bg-black text-slate-900 dark:text-white border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold mb-2">LIBOSO</h3>
-            <p className="text-slate-300 text-sm">{t('footer.description')}</p>
+            <p className="text-slate-600 dark:text-slate-300 text-sm">{t('footer.description')}</p>
           </div>
 
           {/* Quick Links */}
@@ -22,22 +22,22 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-slate-300 hover:text-white transition">
+                <Link href="/" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link href="/a-propos" className="text-slate-300 hover:text-white transition">
+                <Link href="/a-propos" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('navigation.about')}
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition">
+                <Link href="/services" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('navigation.services')}
                 </Link>
               </li>
               <li>
-                <Link href="/transfrontalier" className="text-slate-300 hover:text-white transition">
+                <Link href="/transfrontalier" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('navigation.transborder')}
                 </Link>
               </li>
@@ -49,17 +49,17 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/impact" className="text-slate-300 hover:text-white transition">
+                <Link href="/impact" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('navigation.impact')}
                 </Link>
               </li>
               <li>
-                <Link href="/equipe" className="text-slate-300 hover:text-white transition">
+                <Link href="/equipe" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('navigation.team')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-300 hover:text-white transition">
+                <Link href="/contact" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('navigation.contact')}
                 </Link>
               </li>
@@ -71,12 +71,12 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-slate-300 hover:text-white transition">
+                <a href="#" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('footer.privacy')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-300 hover:text-white transition">
+                <a href="#" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">
                   {t('footer.terms')}
                 </a>
               </li>
@@ -84,8 +84,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-8">
-          <p className="text-center text-slate-400 text-sm">
+        <div className="border-t border-slate-200 dark:border-slate-800 pt-8">
+          <p className="text-center text-slate-500 dark:text-slate-400 text-sm">
             © 2026 LIBOSO SERVICE. {t('footer.rights')}
           </p>
         </div>

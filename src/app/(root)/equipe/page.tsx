@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TEAM } from '@/data/mock';
 import { useI18n } from '@/context/I18nContext';
+import { UserRound } from 'lucide-react';
 
 export default function TeamPage() {
   const { t } = useI18n();
@@ -36,13 +37,10 @@ export default function TeamPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
               >
-                <div className="relative h-80 overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/20" />
+                <div className="h-80 flex items-center justify-center bg-slate-100 dark:bg-slate-700">
+                  <div className="w-40 h-40 rounded-full bg-slate-200 dark:bg-slate-600 flex items-center justify-center">
+                    <UserRound className="w-20 h-20 text-slate-500 dark:text-slate-300" />
+                  </div>
                 </div>
 
                 <div className="p-8 bg-white dark:bg-slate-800">

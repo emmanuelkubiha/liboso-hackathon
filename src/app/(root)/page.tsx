@@ -230,19 +230,19 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-3xl bg-slate-950 text-white border border-slate-800 shadow-2xl p-6 md:p-7"
+            className="rounded-3xl bg-white dark:bg-slate-950 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 shadow-2xl p-6 md:p-7"
           >
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-emerald-300" />
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/20 border border-emerald-300 dark:border-emerald-400/30 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-emerald-600 dark:text-emerald-300" />
               </div>
               <h3 className="text-xl md:text-2xl font-extrabold">{t('pages.availabilityDarkTitle')}</h3>
             </div>
-            <p className="text-slate-300 mb-5 max-w-3xl text-sm md:text-base">{t('pages.availabilityDarkSubtitle')}</p>
+            <p className="text-slate-600 dark:text-slate-300 mb-5 max-w-3xl text-sm md:text-base">{t('pages.availabilityDarkSubtitle')}</p>
 
-            <div className="rounded-2xl bg-slate-900 border border-slate-800 p-4 relative overflow-hidden min-h-[220px]">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(52,211,153,0.18)_0%,_transparent_70%)]" />
-                <div className="relative h-full rounded-xl border border-slate-700/70 bg-slate-950/60">
+            <div className="rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 relative overflow-hidden min-h-[220px]">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(52,211,153,0.12)_0%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,_rgba(52,211,153,0.18)_0%,_transparent_70%)]" />
+                <div className="relative h-full rounded-xl border border-slate-300/70 dark:border-slate-700/70 bg-white/70 dark:bg-slate-950/60">
                   {availabilityPoints.map((dot, idx) => (
                     <motion.div
                       key={dot.key}
@@ -256,10 +256,10 @@ export default function HomePage() {
                       <button
                         type="button"
                         onClick={() => setSelectedCountry(dot)}
-                        className="w-7 h-7 rounded-full bg-slate-900/90 border border-emerald-400/50 hover:border-emerald-300 transition flex items-center justify-center"
+                        className="w-7 h-7 rounded-full bg-white/90 dark:bg-slate-900/90 border border-emerald-400/60 hover:border-emerald-500 dark:hover:border-emerald-300 transition flex items-center justify-center"
                         aria-label={t(`pages.availabilityCountries.${dot.key}`)}
                       >
-                        <MapPin className="w-3.5 h-3.5 text-emerald-300" />
+                        <MapPin className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-300" />
                       </button>
                     </motion.div>
                   ))}
@@ -268,11 +268,11 @@ export default function HomePage() {
                     <motion.div
                       initial={{ opacity: 0, y: 8, scale: 0.98 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
-                      className="absolute left-1/2 top-4 -translate-x-1/2 bg-slate-900/95 border border-slate-700 rounded-xl px-4 py-2 text-center shadow-xl"
+                      className="absolute left-1/2 top-4 -translate-x-1/2 bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 text-center shadow-xl"
                     >
                       <div className="flex items-center gap-2 justify-center">
                         <span className="text-lg leading-none">{selectedCountry.flag}</span>
-                        <p className="text-sm font-semibold text-slate-100">
+                        <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                           {t(`pages.availabilityCountries.${selectedCountry.key}`)}
                         </p>
                         <CircleCheck className="w-4 h-4 text-emerald-400" />
@@ -280,7 +280,7 @@ export default function HomePage() {
                     </motion.div>
                   )}
                 </div>
-                <p className="relative mt-3 text-xs text-slate-400">{t('pages.availabilityClickHint')}</p>
+                <p className="relative mt-3 text-xs text-slate-500 dark:text-slate-400">{t('pages.availabilityClickHint')}</p>
               </div>
           </motion.div>
         </div>
@@ -402,10 +402,10 @@ export default function HomePage() {
       </section>
 
       {/* NOS OBJECTIFS — Section WOW avec photos */}
-      <section className="py-28 px-4 sm:px-6 lg:px-8 bg-slate-950 overflow-hidden relative">
+      <section className="py-28 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 overflow-hidden relative">
         {/* Fond décoratif */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(59,130,246,0.18)_0%,_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(16,185,129,0.15)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 dark:bg-[radial-gradient(ellipse_at_top_left,_rgba(59,130,246,0.18)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 dark:bg-[radial-gradient(ellipse_at_bottom_right,_rgba(16,185,129,0.15)_0%,_transparent_60%)]" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Titre animé */}
@@ -425,13 +425,13 @@ export default function HomePage() {
             >
               {t('pages.objectivesBadge')}
             </motion.span>
-            <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
               {t('pages.objectivesTitleStart')}{' '}
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
                 {t('pages.objectivesTitleHighlight')}
               </span>
             </h2>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               {t('pages.objectivesSubtitle')}
             </p>
           </motion.div>
@@ -544,12 +544,12 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.12 }}
                 whileHover={{ y: -4, backgroundColor: 'rgba(255,255,255,0.08)' }}
-                className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur transition-all duration-300"
+                className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur transition-all duration-300"
               >
-                <item.icon className="w-6 h-6 text-blue-300 mt-0.5" />
+                <item.icon className="w-6 h-6 text-blue-600 dark:text-blue-300 mt-0.5" />
                 <div>
-                  <h4 className="text-white font-bold mb-1">{item.title}</h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                  <h4 className="text-slate-900 dark:text-white font-bold mb-1">{item.title}</h4>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

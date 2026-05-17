@@ -1,13 +1,32 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { COUNTRIES } from '@/data/mock';
 import { useI18n } from '@/context/I18nContext';
-import { Globe, Star, BarChart3, Handshake, Smartphone, Plane } from 'lucide-react';
+import { Globe, Star, BarChart3, Handshake, Smartphone, Plane, MapPin } from 'lucide-react';
 
 export default function TransborderPage() {
   const { t, language } = useI18n();
+  const [selectedCountryCode, setSelectedCountryCode] = useState('CD');
+
+  const flagByCode: Record<string, string> = {
+    CD: '🇨🇩',
+    RW: '🇷🇼',
+    KE: '🇰🇪',
+    TZ: '🇹🇿',
+    UG: '🇺🇬',
+  };
+
+  const mapPoints: Array<{ code: string; x: string; y: string }> = [
+    { code: 'CD', x: '28%', y: '56%' },
+    { code: 'RW', x: '50%', y: '49%' },
+    { code: 'UG', x: '58%', y: '42%' },
+    { code: 'KE', x: '70%', y: '48%' },
+    { code: 'TZ', x: '64%', y: '62%' },
+  ];
+
+  const selectedCountry = COUNTRIES.find((country) => country.code === selectedCountryCode) || COUNTRIES[0];
 
   return (
     <div className="pt-24 pb-20">
@@ -35,7 +54,7 @@ export default function TransborderPage() {
                 key={country.code}
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur text-sm font-medium"
               >
-                <span>{['🇨🇩', '🇷🇼', '🇰🇪', '🇹🇿', '🇺🇬'][idx]}</span>
+                <span>{flagByCode[country.code] || '🏳️'}</span>
                 <span>{language === 'en' ? country.nameEn : country.name}</span>
               </span>
             ))}
@@ -61,21 +80,88 @@ export default function TransborderPage() {
           </motion.div>
 
           {/* Map Visualization */}
-          <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 min-h-96 flex items-center justify-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="mb-4"><Globe className="w-16 h-16 mx-auto text-purple-600" /></div>
-              <p className="text-xl font-semibold text-slate-900 dark:text-white">
-                {t('transborderSection.mapTitle')}
-              </p>
-              <p className="text-slate-600 dark:text-slate-400 mt-2">
-                {t('transborderSection.mapDesc')}
-              </p>
-            </motion.div>
+          <div className="mb-12 p-6 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+            <div className="grid lg:grid-cols-3 gap-5 items-stretch">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="lg:col-span-2 relative rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 min-h-[320px] overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(59,130,246,0.08),transparent_50%),radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.08),transparent_45%)]" />
+                <div className="absolute top-[46%] left-[30%] w-[22%] h-[2px] bg-purple-400/40" />
+                <div className="absolute top-[48%] left-[52%] w-[18%] h-[2px] bg-purple-400/40" />
+                <div className="absolute top-[50%] left-[60%] w-[8%] h-[2px] bg-purple-400/40 rotate-[28deg]" />
+
+                {mapPoints.map((point, idx) => {
+                  const country = COUNTRIES.find((item) => item.code === point.code);
+                  const isActive = selectedCountryCode === point.code;
+
+                  return (
+                    <motion.button
+                      key={point.code}
+                      type="button"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.08 }}
+                      onClick={() => setSelectedCountryCode(point.code)}
+                      className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full px-2.5 py-1.5 border text-sm shadow transition ${
+                        isActive
+                          ? 'bg-purple-600 text-white border-purple-500'
+                          : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-slate-300 dark:border-slate-600 hover:border-purple-400'
+                      }`}
+                      style={{ left: point.x, top: point.y }}
+                      aria-label={country ? (language === 'en' ? country.nameEn : country.name) : point.code}
+                    >
+                      <span>{flagByCode[point.code] || '🏳️'}</span>
+                    </motion.button>
+                  );
+                })}
+
+                <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-500 dark:text-slate-400 bg-white/70 dark:bg-slate-900/70 backdrop-blur rounded-lg px-3 py-2 border border-slate-200 dark:border-slate-700">
+                  {language === 'en'
+                    ? 'Click a marker to explore each country role in the transborder network.'
+                    : 'Cliquez sur un marqueur pour voir le rôle de chaque pays dans le réseau transfrontalier.'}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-5"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center text-xl">
+                    {flagByCode[selectedCountry.code] || '🏳️'}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                      {language === 'en' ? selectedCountry.nameEn : selectedCountry.name}
+                    </h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">{selectedCountry.currency}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                    {selectedCountry.role === 'strategic' ? <Star className="w-4 h-4 text-green-500" /> : selectedCountry.role === 'main' ? <BarChart3 className="w-4 h-4 text-blue-500" /> : <Handshake className="w-4 h-4 text-orange-500" />}
+                    <span className="font-medium">
+                      {selectedCountry.role === 'strategic'
+                        ? t('transborderSection.strategicHub')
+                        : selectedCountry.role === 'main'
+                          ? t('transborderSection.mainMarket')
+                          : t('transborderSection.partner')}
+                    </span>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 leading-relaxed">
+                    {t('transborderSection.mapDesc')}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
 
           {/* Countries Grid */}
@@ -95,7 +181,9 @@ export default function TransborderPage() {
                       : 'bg-orange-100 dark:bg-orange-900/30 border-2 border-orange-600'
                 }`}
               >
-                <div className="text-4xl mb-3">{['🇨🇩', '🇷🇼', '🇰🇪', '🇹🇿', '🇺🇬'][idx]}</div>
+                <div className="mb-3 flex justify-center">
+                  <span className="text-3xl">{flagByCode[country.code] || '🏳️'}</span>
+                </div>
                 <h3 className="font-bold text-slate-900 dark:text-white mb-1">{country.name}</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">{country.currency}</p>
                 <span className="text-xs font-semibold flex items-center gap-1.5">

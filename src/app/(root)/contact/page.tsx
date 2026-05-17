@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useI18n } from '@/context/I18nContext';
+import { MapPin, Mail, Phone, Clock3 } from 'lucide-react';
 
 export default function ContactPage() {
   const { t } = useI18n();
@@ -99,7 +100,9 @@ export default function ContactPage() {
 
               <div className="space-y-8">
                 <div className="flex gap-4">
-                  <div className="text-3xl">📍</div>
+                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Siège Social</h3>
                     <p className="text-slate-600 dark:text-slate-400">
@@ -111,7 +114,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="text-3xl">📧</div>
+                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Email</h3>
                     <a href="mailto:hello@liboso.com" className="text-teal-600 hover:text-teal-700">
@@ -125,7 +130,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="text-3xl">📱</div>
+                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Téléphone</h3>
                     <p className="text-slate-600 dark:text-slate-400">
@@ -137,7 +144,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="text-3xl">⏰</div>
+                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
+                    <Clock3 className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Heures d'Ouverture</h3>
                     <p className="text-slate-600 dark:text-slate-400">
