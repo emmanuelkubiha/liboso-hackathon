@@ -12,14 +12,14 @@ export default function TeamPage() {
   return (
     <div className="pt-24 pb-20">
       {/* Hero */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-600 to-purple-600">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="max-w-7xl mx-auto text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-5xl font-bold mb-4">{t('team.title')}</h1>
-            <p className="text-xl text-purple-100">{t('team.subtitle')}</p>
+            <p className="text-xl text-blue-100">{t('team.subtitle')}</p>
           </motion.div>
         </div>
       </section>

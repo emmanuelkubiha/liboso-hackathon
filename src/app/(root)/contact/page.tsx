@@ -10,14 +10,14 @@ export default function ContactPage() {
   return (
     <div className="pt-24 pb-20">
       {/* Hero */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-600 to-cyan-600">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="max-w-7xl mx-auto text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-5xl font-bold mb-4">{t('contactPage.contactTitle')}</h1>
-            <p className="text-xl text-cyan-100">{t('contactPage.contactSubtitle')}</p>
+            <p className="text-xl text-blue-100">{t('contactPage.contactSubtitle')}</p>
           </motion.div>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder={t('contactPage.yourName')}
                   />
                 </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder={t('contactPage.subjectPlaceholder')}
                   />
                 </div>
@@ -74,14 +74,14 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder={t('contactPage.messagePlaceholder')}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-lg transition-colors"
+                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors"
                 >
                   {t('contactPage.sendButton')}
                 </button>
@@ -100,8 +100,8 @@ export default function ContactPage() {
 
               <div className="space-y-8">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-blue-700 dark:text-blue-300" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Siège Social</h3>
@@ -114,24 +114,24 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-blue-700 dark:text-blue-300" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Email</h3>
-                    <a href="mailto:hello@liboso.com" className="text-teal-600 hover:text-teal-700">
+                    <a href="mailto:hello@liboso.com" className="text-blue-600 hover:text-blue-700">
                       hello@liboso.com
                     </a>
                     <br />
-                    <a href="mailto:business@liboso.com" className="text-teal-600 hover:text-teal-700">
+                    <a href="mailto:business@liboso.com" className="text-blue-600 hover:text-blue-700">
                       business@liboso.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-blue-700 dark:text-blue-300" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Téléphone</h3>
@@ -144,8 +144,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
-                    <Clock3 className="w-5 h-5 text-teal-700 dark:text-teal-300" />
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                    <Clock3 className="w-5 h-5 text-blue-700 dark:text-blue-300" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-2">Heures d'Ouverture</h3>
@@ -168,7 +168,7 @@ export default function ContactPage() {
                     <a
                       key={platform}
                       href="#"
-                      className="px-4 py-2 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-lg hover:bg-teal-200 dark:hover:bg-teal-900 transition-colors"
+                      className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-900 transition-colors"
                     >
                       {platform}
                     </a>

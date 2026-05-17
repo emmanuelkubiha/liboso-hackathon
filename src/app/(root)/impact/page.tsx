@@ -15,7 +15,6 @@ import {
   Check,
   GraduationCap,
   Gift,
-  FileCheck,
   ClipboardList,
   Handshake,
   TrendingUp,
@@ -54,9 +53,9 @@ export default function VisionPage() {
   const pillars = [
     { icon: Compass, gradient: 'from-blue-500 to-blue-700', glow: 'rgba(59,130,246,0.4)', titleKey: 'impact.pillar1Title', descKey: 'impact.pillar1Desc' },
     { icon: BookOpen, gradient: 'from-purple-500 to-purple-700', glow: 'rgba(168,85,247,0.4)', titleKey: 'impact.pillar2Title', descKey: 'impact.pillar2Desc' },
-    { icon: Users, gradient: 'from-pink-500 to-rose-600', glow: 'rgba(236,72,153,0.4)', titleKey: 'impact.pillar3Title', descKey: 'impact.pillar3Desc' },
-    { icon: CreditCard, gradient: 'from-yellow-500 to-orange-500', glow: 'rgba(234,179,8,0.4)', titleKey: 'impact.pillar4Title', descKey: 'impact.pillar4Desc' },
-    { icon: Globe, gradient: 'from-green-500 to-emerald-600', glow: 'rgba(34,197,94,0.4)', titleKey: 'impact.pillar5Title', descKey: 'impact.pillar5Desc' },
+    { icon: Users, gradient: 'from-indigo-500 to-purple-600', glow: 'rgba(129,140,248,0.4)', titleKey: 'impact.pillar3Title', descKey: 'impact.pillar3Desc' },
+    { icon: CreditCard, gradient: 'from-blue-500 to-cyan-600', glow: 'rgba(59,130,246,0.4)', titleKey: 'impact.pillar4Title', descKey: 'impact.pillar4Desc' },
+    { icon: Globe, gradient: 'from-sky-500 to-blue-700', glow: 'rgba(56,189,248,0.4)', titleKey: 'impact.pillar5Title', descKey: 'impact.pillar5Desc' },
   ];
 
   return (
@@ -82,7 +81,7 @@ export default function VisionPage() {
         <motion.div
           animate={{ scale: [1, 1.4, 1], opacity: [0.2, 0.5, 0.2] }}
           transition={{ duration: 8, repeat: Infinity, delay: 2 }}
-          className="absolute bottom-20 right-20 w-80 h-80 rounded-full bg-green-500/20 blur-3xl"
+          className="absolute bottom-20 right-20 w-80 h-80 rounded-full bg-cyan-500/20 blur-3xl"
         />
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
@@ -167,7 +166,7 @@ export default function VisionPage() {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="w-20 h-1.5 bg-gradient-to-r from-blue-500 to-green-500 rounded mx-auto mb-8"
+              className="w-20 h-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded mx-auto mb-8"
             />
             <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-8">
               {t('impact.manifestoTitle')}
@@ -229,7 +228,7 @@ export default function VisionPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-900/95 via-rose-800/90 to-pink-700/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-indigo-800/90 to-purple-800/80" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -254,7 +253,7 @@ export default function VisionPage() {
                     transition={{ delay: 0.3 + i * 0.15 }}
                     className="flex items-center gap-4 bg-white/10 backdrop-blur rounded-xl px-5 py-3"
                   >
-                    <Check className="w-6 h-6 text-pink-200" />
+                    <Check className="w-6 h-6 text-blue-200" />
                     <span className="text-white font-medium">{pt}</span>
                   </motion.li>
                 ))}
@@ -279,7 +278,7 @@ export default function VisionPage() {
                   <s.icon className="w-10 h-10 text-white" />
                   <div>
                     <div className="text-4xl font-black text-white">{s.value}</div>
-                    <p className="text-pink-100">{s.label}</p>
+                    <p className="text-blue-100">{s.label}</p>
                   </div>
                 </motion.div>
               ))}
@@ -290,7 +289,7 @@ export default function VisionPage() {
 
       {/* ═══ FORMATION ═══ */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500" />
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
@@ -332,8 +331,8 @@ export default function VisionPage() {
                 {[
                   { icon: ClipboardList, numKey: '01', titleKey: 'impact.training1', descKey: 'impact.training1Desc', color: 'border-blue-500' },
                   { icon: Handshake, numKey: '02', titleKey: 'impact.training2', descKey: 'impact.training2Desc', color: 'border-purple-500' },
-                  { icon: TrendingUp, numKey: '03', titleKey: 'impact.training3', descKey: 'impact.training3Desc', color: 'border-green-500' },
-                  { icon: Rocket, numKey: '04', titleKey: 'impact.training4', descKey: 'impact.training4Desc', color: 'border-orange-500' },
+                  { icon: TrendingUp, numKey: '03', titleKey: 'impact.training3', descKey: 'impact.training3Desc', color: 'border-cyan-500' },
+                  { icon: Rocket, numKey: '04', titleKey: 'impact.training4', descKey: 'impact.training4Desc', color: 'border-indigo-500' },
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -362,7 +361,7 @@ export default function VisionPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
         {/* Grille décorative */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(34,197,94,0.08)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.08)_0%,_transparent_70%)]" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div {...fadeUp(0)} className="text-center mb-20">
@@ -371,7 +370,7 @@ export default function VisionPage() {
               transition={{ duration: 2, repeat: Infinity }}
               className="block mb-6"
             >
-              <Globe className="w-16 h-16 mx-auto text-emerald-500 dark:text-emerald-400" />
+              <Globe className="w-16 h-16 mx-auto text-blue-500 dark:text-blue-400" />
             </motion.div>
             <h2 className="text-5xl font-extrabold text-slate-900 dark:text-white mb-4">{t('impact.leaderTitle')}</h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">{t('impact.leaderText')}</p>
@@ -428,7 +427,7 @@ export default function VisionPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { icon: Smartphone, titleKey: 'impact.digital1', descKey: 'impact.digital1Desc', color: 'from-blue-600/20 to-cyan-600/20', border: 'border-blue-500/30' },
-              { icon: BadgeDollarSign, titleKey: 'impact.digital2', descKey: 'impact.digital2Desc', color: 'from-green-600/20 to-emerald-600/20', border: 'border-green-500/30' },
+              { icon: BadgeDollarSign, titleKey: 'impact.digital2', descKey: 'impact.digital2Desc', color: 'from-indigo-600/20 to-blue-600/20', border: 'border-indigo-500/30' },
             ].map((d, i) => (
               <motion.div
                 key={i}
@@ -494,7 +493,7 @@ export default function VisionPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-blue-800/90 to-green-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-indigo-800/90 to-purple-900/90" />
         </div>
         {/* Particules animées */}
         {[...Array(6)].map((_, i) => (

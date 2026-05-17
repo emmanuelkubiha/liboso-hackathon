@@ -34,14 +34,14 @@ export default function FeedbackPage() {
   return (
     <div className="pt-24 pb-20">
       {/* Hero */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-emerald-600">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="max-w-7xl mx-auto text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-5xl font-bold mb-4">{t('feedback.title')}</h1>
-            <p className="text-xl text-emerald-100">{t('feedback.subtitle')}</p>
+            <p className="text-xl text-blue-100">{t('feedback.subtitle')}</p>
           </motion.div>
         </div>
       </section>

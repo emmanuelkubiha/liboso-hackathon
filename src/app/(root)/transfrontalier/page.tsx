@@ -31,14 +31,14 @@ export default function TransborderPage() {
   return (
     <div className="pt-24 pb-20">
       {/* Hero */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-pink-600">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="max-w-7xl mx-auto text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-5xl font-bold mb-4">{t('transborder.title')}</h1>
-            <p className="text-xl text-pink-100">
+            <p className="text-xl text-blue-100">
               {t('transborder.subtitle')}
             </p>
           </motion.div>
@@ -55,7 +55,7 @@ export default function TransborderPage() {
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur text-sm font-medium"
               >
                 <span>{flagByCode[country.code] || '🏳️'}</span>
-                <span>{language === 'en' ? country.nameEn : country.name}</span>
+                <span className="text-blue-50">{language === 'en' ? country.nameEn : country.name}</span>
               </span>
             ))}
           </motion.div>
